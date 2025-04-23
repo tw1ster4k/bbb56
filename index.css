@@ -169,6 +169,7 @@ a{
     height: 34px;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 .second-line{
     width: 100%;
@@ -1727,5 +1728,154 @@ a{
     .main-news-content-block-telegram-link{
         width: 185px;
         margin-top: 167px;
+    }
+}
+
+/* Контакты */
+.main-contacts{
+    padding: 40px;
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 124px;
+}
+.main-contacts-title{
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Montserrat-Bold";
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #0082B8;
+    margin-bottom: 32px;
+}
+.main-contacts-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main-contacts-content-block{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.main-contacts-content-block-contacts{
+    padding: 18px;
+    width: 100%;
+    height: 424px;
+    border-radius: 24px;
+    background: #F3FBFF;
+}
+.main-contacts-content-map{
+    border-radius: 24px;
+    border: none;
+    height: 720px;
+    width: 800px;
+}
+
+.main-contacts-content-block-contacts-title{
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+    margin-bottom: 16px;
+}
+
+.main-contacts-content-block-contacts-link{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Montserrat-SemiBold";
+    color: #0082B8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.main-contacts-content-block-contacts-messages{
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.main-contacts-content-block-contacts-times{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+}
+.main-contacts-content-block-contacts-times-days{
+    font-weight: 500;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    line-height: 18.01px;
+    margin-right: 8px;
+    color: #8DB7CF;
+}
+.main-contacts-content-block-contacts-times-time{
+    font-weight: 500;
+    font-family: "Montserrat-Medium";
+    font-size: 14px;
+    line-height: 18.01px;
+    color: #232323;
+}
+.main-contacts-content-block-online{
+    background: url(./images/contacts-online-bg.svg);
+    width: 536px;
+    height: 245px;
+    border-radius: 24px;
+    margin-top: 16px;
+}
+.main-contacts-content-block-online-link{
+    border-radius: 27px;
+    background-color: #0082B8;
+    color: #fff;
+    width: 196px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
+    font-size: 20px;
+    line-height: 100%;
+    margin-left: 32px;
+    margin-top: 170px;
+}
+@media(max-width:767px){
+    .main-contacts{
+        padding: 0;
+    }
+    .main-contacts-title{
+        display: none;
+    }
+    .main-contacts-content{
+        flex-direction: column;
+    }
+    .main-contacts-content-block{
+        width: 100%;
+    }
+    .main-contacts-content-block-contacts{
+        width: 90%;
+    }
+    .main-contacts-content-block-online{
+        background: url(./images/contacts-online-bg-mobil.svg);
+        width: 100%;
+        background-size: 100%;
+    }
+    .main-contacts-content-block-online-link{
+        width: 224px;
+        height: 48px;
+        font-size: 16px;
+        margin-left: 14px;
+        margin-top: 150px;
+    }
+    .main-contacts-content-map{
+        width: 100%;
+        height: 214px;
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 }
