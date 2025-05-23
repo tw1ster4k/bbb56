@@ -1,15 +1,18 @@
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/Frame 11.svg" type="image/x-icon">
     <link rel="stylesheet" href="./index.css" />
     <title>Стоматология Бэбибум</title>
 </head>
 <body>
     <header class="navbar">
         <div class="first-line">
-            <img src="./images/logo.svg" class="logo" />
+            <a href="./index.html">
+                <img src="./images/logo.svg" class="logo" />
+            </a>
             <input class="search" placeholder="Поиск" />
             <a class="tel-link" href="tel:+73532662002">+7 (3532) 66 20-02</a>
             <div class="messengers">
@@ -18,18 +21,20 @@
                 <a class="soc-net" href="https://web.telegram.org/a/#6568958581"><img src="images/tg.svg" /></a>
             </div>
             <button class="call-btn"><img src="images/call.svg" /> Заказать звонок</button>
-            <button class="online-sing">Онлайн запись</button>
+            <button class="online-sing"><img src="images/tgg.svg" /> Онлайн запись</button>
         </div>
         <div class="second-line">
             <a class="html-anchor"><img class="html-anchor-img" src="images/nav/1.svg" /> Услуги</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/2.svg" /> Цены</a>
+            <a class="html-anchor" href="./price.html"><img class="html-anchor-img" src="images/nav/2.svg" /> Цены</a>
             <a class="html-anchor"><img class="html-anchor-img" src="images/nav/3.svg"/> Специалисты</a>
             <a class="html-anchor"><img class="html-anchor-img" src="images/nav/4.svg" /> Клиника</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/5.svg" /> Контакты</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/6.svg" /> Отзывы</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/7.svg" /> COVID-19</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/8.svg" /> Пациенту</a>
-            <a class="html-anchor"><img class="html-anchor-img" src="images/nav/9.svg" /> Новости и акции</a>
+            <a class="html-anchor" href="./contacts.html"><img class="html-anchor-img" src="images/nav/5.svg" /> Контакты</a>
+            <a class="html-anchor" href="./reviews.html"><img class="html-anchor-img" src="images/nav/6.svg" /> Отзывы</a>
+            <a class="html-anchor" href="./covid.html"><img class="html-anchor-img" src="images/nav/7.svg" /> COVID-19</a>
+            <a class="html-anchor" href="./patient.html"><img class="html-anchor-img" src="images/nav/8.svg" /> Пациенту</a>
+            <a class="html-anchor" href="./news.html"><img class="html-anchor-img" src="images/nav/9.svg" /> Новости и акции</a>
+            <a href="./faq.html" class="html-anchor"><img class="html-anchor-img" src="images/nav/11.svg"  /> FAQ</a>
+            <a class="html-anchor" href="./blog.html"><img class="html-anchor-img" src="images/nav/10.svg" /> Наш блог</a>
         </div>
         <div class="mobile-line">
             <div class="mobile-line-search">
@@ -87,11 +92,11 @@
     <div style="margin-top: 116px;" class="main">
         <div class="carousel">
             <div class="carousel-content">
-                <img src="images/logo.svg" class="carousel-logo"  />
-                <h2 class="carousel-title">ЗАГОЛОВОК ОФФЕРА</h2>
-                <p class="carousel-description">Текст оффера две или три строки
-                    запишись к врачу!</p>
-                    <button class="carousel-btn"><img style="margin-right: 10px;" src="./images/telegram3.svg" /> Записаться</button>
+                <img class="carousel-content-img" src="./images/Frame 171 (1).png" />
+                <img class="carousel-content-img" src="./images/Frame 171 (1).png" />
+                <img class="carousel-content-img" src="./images/Frame 171 (1).png" />
+            </div>
+            <div class="carousel-dots">
             </div>
         </div>
         <div class="achievements" >
@@ -145,6 +150,11 @@
                     <img class="description-card-img mobil" src="./images/description-card-img3-mobil.png" />
                 </div>
             </div>
+            <div class="description-dots">
+                <span class="description-dots-dot active" data-index="0"></span>
+                <span class="description-dots-dot" data-index="1"></span>
+                <span class="description-dots-dot" data-index="2"></span>
+              </div>
         </div>
         <div class="online">
             <img class="online-img" src="./images/online-registration.svg" />
@@ -288,6 +298,18 @@
                     </div>
                 </div>
             </div>
+            <div class="blog-dots">
+                <span class="blog-dots-dot active" data-index="0"></span>
+                <span class="blog-dots-dot" data-index="1"></span>
+                <span class="blog-dots-dot" data-index="2"></span>
+                <span class="blog-dots-dot" data-index="3"></span>
+                <span class="blog-dots-dot" data-index="4"></span>
+                <span class="blog-dots-dot" data-index="5"></span>
+                <span class="blog-dots-dot" data-index="6"></span>
+                <span class="blog-dots-dot" data-index="7"></span>
+                <span class="blog-dots-dot" data-index="8"></span>
+                <span class="blog-dots-dot" data-index="9"></span>
+              </div>
         </div>
         <div class="news">
             <div class="news-line">
@@ -344,6 +366,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="news-dots">
+                    <span class="news-dots-dot active" data-index="0"></span>
+                    <span class="news-dots-dot" data-index="1"></span>
+                    <span class="news-dots-dot" data-index="2"></span>
+                    <span class="news-dots-dot" data-index="3"></span>
+                    <span class="news-dots-dot" data-index="4"></span>
+                    <span class="news-dots-dot" data-index="5"></span>
+                  </div>
         </div>
         <div class="employees">
             <div class="employees-line">
@@ -424,6 +454,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="employees-dots">
+                    <span class="employees-dots-dot active" data-index="0"></span>
+                    <span class="employees-dots-dot" data-index="1"></span>
+                    <span class="employees-dots-dot" data-index="2"></span>
+                    <span class="employees-dots-dot" data-index="3"></span>
+                    <span class="employees-dots-dot" data-index="4"></span>
+                    <span class="employees-dots-dot" data-index="5"></span>
+                  </div>
         </div>
         <div class="kids">
             <div class="kids-line">
@@ -459,6 +497,17 @@
                     <img src="./images/kids-card-img5.png" class="kids-card-img" />
                 </a>
             </div>
+            <div class="kids-dots">
+                <span class="kids-dots-dot active" data-index="0"></span>
+                <span class="kids-dots-dot" data-index="1"></span>
+                <span class="kids-dots-dot" data-index="2"></span>
+                <span class="kids-dots-dot" data-index="3"></span>
+                <span class="kids-dots-dot" data-index="4"></span>
+                <span class="kids-dots-dot" data-index="5"></span>
+                <span class="kids-dots-dot" data-index="6"></span>
+                <span class="kids-dots-dot" data-index="7"></span>
+                <span class="kids-dots-dot" data-index="8"></span>
+              </div>
         </div>
         <div class="reviews">
             <div class="reviews-line">
@@ -515,6 +564,11 @@
                     </div>
                 </div>
             </div>
+            <div class="reviews-dots">
+                <span class="reviews-dots-dot active" data-index="0"></span>
+                <span class="reviews-dots-dot" data-index="1"></span>
+                <span class="reviews-dots-dot" data-index="2"></span>
+              </div>
         </div>
         <div class="now">
             <h2 class="now-title">Запишитесь прямо сейчас!</h2>
@@ -554,6 +608,14 @@
                     <h3 class="licenses-card-title">Лицензия на осуществление медицинской деятельности</h3>
                 </div>
             </div>
+            <div class="licenses-dots">
+                <span class="licenses-dots-dot active" data-index="0"></span>
+                <span class="licenses-dots-dot" data-index="1"></span>
+                <span class="licenses-dots-dot" data-index="2"></span>
+                <span class="licenses-dots-dot" data-index="3"></span>
+                <span class="licenses-dots-dot" data-index="4"></span>
+                <span class="licenses-dots-dot" data-index="5"></span>
+              </div>
         </div>
         <div class="gallery">
             <div class="gallery-line">
@@ -570,6 +632,16 @@
                 <img src="./images/gallery-img1.jpeg" alt="" class="gallery-content-img">
                 <img src="./images/gallery-img1.jpeg" alt="" class="gallery-content-img">
             </div>
+            <div class="gallery-dots">
+                <span class="gallery-dots-dot active" data-index="0"></span>
+                <span class="gallery-dots-dot" data-index="1"></span>
+                <span class="gallery-dots-dot" data-index="2"></span>
+                <span class="gallery-dots-dot" data-index="3"></span>
+                <span class="gallery-dots-dot" data-index="4"></span>
+                <span class="gallery-dots-dot" data-index="5"></span>
+                <span class="gallery-dots-dot" data-index="6"></span>
+                <span class="gallery-dots-dot" data-index="7"></span>
+              </div>
         </div>
     </div>
     <footer class="footer">
@@ -628,6 +700,61 @@
         <h2 class="footer-title">Имеются противопоказания. Необходима консультация специалиста.</h2>
         <h3 class="footer-copyright">© 2025 Все права защищены.</h3>
     </footer>
-    <script src="./index.js" ></script>
+    <div class="modal">
+        <div class="modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;" xml:space="preserve">
+                <g>
+                    <g id="cross">
+                        <g>
+                            <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0     L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61     c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576     c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"></path>
+                        </g>
+                    </g>
+                </g>
+                </svg>
+        </div>
+        <h2 class="modal-title">Заказать звонок</h2>
+        <p class="modal-description">Оставьте ваши контактные данные, и наш специалист свяжется с вами в ближайшее время!</p>
+        <p class="modal-input-key required">Ваше имя</p>
+        <input required class="modal-input" placeholder="Введите ваше имя" />
+        <p class="modal-input-key required">Телефон</p>
+        <input required id="phone" type="tel" class="modal-input" placeholder="+7 (XXX) XXX XX XX" />
+        <script>
+            const input = document.getElementById('phone');
+          
+            input.addEventListener('input', () => {
+              let value = input.value.replace(/\D/g, ''); // Удаляем все нецифровые символы
+              const maxLength = 11; // например, для российского номера +7 и 10 цифр
+          
+              if (value.length > maxLength) {
+                value = value.slice(0, maxLength);
+              }
+          
+              // Форматируем номер
+              let formatted = '+7 ';
+              if (value.length > 1) {
+                formatted += '(' + value.slice(1, 4);
+              }
+              if (value.length >= 4) {
+                formatted += ') ' + value.slice(4, 7);
+              }
+              if (value.length >= 7) {
+                formatted += '-' + value.slice(7, 9);
+              }
+              if (value.length >= 9) {
+                formatted += '-' + value.slice(9, 11);
+              }
+          
+              input.value = formatted;
+            });
+          </script>
+        <p class="modal-input-key">Дополнительная информация</p>
+        <textarea class="modal-input textarea" placeholder="Хотите что-то добавить?" ></textarea>
+        <label class="modal-label">
+            <input type="checkbox" required class="modal-checkbox" />
+            Я согласен на <a href="/policy">обработку персональных данных</a>
+        </label>
+        <button class="modal-btn">Отправить</button>
+    </div>
+    <script src="/index.js" ></script>
 </body>
 </html>
