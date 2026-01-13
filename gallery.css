@@ -1,0 +1,28 @@
+/* Gallery Page Styles */
+
+.main-gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.main-gallery-item {
+    width: 194px;
+    height: 194px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Mobile Responsive */
+@media(max-width: 767px) {
+    .main-gallery-grid {
+        gap: 8px;
+        padding: 0 16px;
+    }
+
+    .main-gallery-item {
+        width: 167px;
+        height: 167px;
+        border-radius: 16px;
+    }
+}

@@ -1,0 +1,101 @@
+/* Страница Реквизиты (requisites.html) */
+
+.main-requisites-intro {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+    margin-bottom: 24px;
+}
+
+.main-requisites-table {
+    border: 1px solid #DCEFF9;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-requisites-table-row {
+    display: flex;
+    border-bottom: 1px solid #DCEFF9;
+}
+
+.main-requisites-table-row:last-child {
+    border-bottom: none;
+}
+
+.main-requisites-table-cell {
+    padding: 10px 12px;
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+    flex: 1 0 0;
+}
+
+.main-requisites-table-cell-header {
+    width: 250px;
+    flex: 0 0 250px;
+    background: #F3FBFF;
+    border-right: 1px solid #DCEFF9;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+}
+
+.main-requisites-link {
+    color: #0082B8;
+    text-decoration: underline;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main-requisites-link:hover {
+    color: #005476;
+}
+
+@media(max-width: 767px) {
+    .main-requisites-intro {
+        font-size: 14px;
+        padding: 0 16px;
+        margin-bottom: 16px;
+    }
+    
+    .main-requisites-table {
+        margin: 0 16px;
+    }
+    
+    .main-requisites-table-row {
+        flex-direction: column;
+        border-bottom: 1px solid #DCEFF9;
+    }
+    
+    .main-requisites-table-row:last-child {
+        border-bottom: none;
+    }
+    
+    .main-requisites-table-cell {
+        padding: 8px 10px;
+        font-size: 12px;
+        line-height: 18.01px;
+        border-right: none;
+    }
+    
+    .main-requisites-table-cell-header {
+        width: 100%;
+        flex: 1 0 0;
+        border-right: none;
+        border-bottom: 1px solid #DCEFF9;
+    }
+    
+    .main-requisites-table-row:last-child .main-requisites-table-cell-header {
+        border-bottom: none;
+    }
+    
+    .main-requisites-link {
+        font-size: 12px;
+    }
+}

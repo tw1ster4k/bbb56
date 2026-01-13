@@ -1,0 +1,386 @@
+/* Страница Цены */
+
+/* ⚠️ ТРЕБУЕТСЯ РУЧНАЯ ЗАГРУЗКА ИЗ FIGMA:
+   - Декоративные элементы зубов для информационного блока справа (nodeId требуется уточнить из Figma)
+   - Изображения должны быть размещены в ./images/price-info-tooth-1.svg и ./images/price-info-tooth-2.svg
+*/
+
+.main-price-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 124px;
+    padding: 0 40px 40px 40px;
+}
+
+/* Breadcrumbs */
+.main-price-page-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 0;
+    font-family: "Montserrat-SemiBold";
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.main-price-page-breadcrumbs-item {
+    color: #B8B8B8;
+}
+
+.main-price-page-breadcrumbs-separator {
+    color: #B8B8B8;
+}
+
+.main-price-page-breadcrumbs-item-active {
+    color: #0082B8;
+}
+
+/* Page Title */
+.main-price-page-title {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #0082B8;
+    margin-bottom: 32px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+
+/* Main Content */
+.main-price-page-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Left Column - Table */
+.main-price-page-table-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-price-page-organization {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #333333;
+}
+
+.main-price-page-price-list-title {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+    text-transform: uppercase;
+}
+
+.main-price-page-date {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #B8B8B8;
+}
+
+.main-price-page-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #DCEFF9;
+}
+
+.main-price-page-table-header {
+    background: #F3FBFF;
+}
+
+.main-price-page-table-header th {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #232323;
+    padding: 12px 16px;
+    text-align: left;
+    border-right: 1px solid #DCEFF9;
+}
+
+.main-price-page-table-header th:last-child {
+    border-right: none;
+}
+
+.main-price-page-table-header-code {
+    width: 120px;
+}
+
+.main-price-page-table-header-name {
+    width: auto;
+}
+
+.main-price-page-table-header-price {
+    width: 150px;
+    text-align: right;
+}
+
+.main-price-page-table-category {
+    background: #F3FBFF;
+    border-bottom: 1px solid #DCEFF9;
+}
+
+.main-price-page-table-category-cell {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+    padding: 12px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #DCEFF9;
+}
+
+.main-price-page-table-row {
+    background: #FFFFFF;
+}
+
+
+.main-price-page-table-row td {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+    padding: 12px 16px;
+    border-right: 1px solid #DCEFF9;
+    border-bottom: 1px solid #DCEFF9;
+}
+
+.main-price-page-table-row td:last-child {
+    border-right: none;
+}
+
+.main-price-page-table-code {
+    width: 120px;
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.main-price-page-table-name {
+    width: auto;
+}
+
+.main-price-page-table-price {
+    width: 150px;
+    text-align: right;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #232323;
+}
+
+/* Right Column - Info Block */
+.main-price-page-info {
+    width: 450px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #F3FBFF 0%, #E8F4FA 100%);
+    border-radius: 24px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Декоративные элементы зубов - требуют загрузки из Figma через MCP API */
+.main-price-page-info::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: url('./images/price-info-tooth-1.svg') no-repeat right top;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.main-price-page-info::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    background: url('./images/price-info-tooth-2.svg') no-repeat right bottom;
+    background-size: contain;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.main-price-page-info-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-price-page-info-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.main-price-page-info-link {
+    color: #0082B8;
+    text-decoration: none;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+}
+
+.main-price-page-info-link:hover {
+    text-decoration: underline;
+}
+
+.main-price-page-info-btn {
+    background: #0082B8;
+    border: none;
+    border-radius: 27px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.main-price-page-info-btn:hover {
+    background: #00719F;
+}
+
+.main-price-page-info-btn:active {
+    background: #005476;
+}
+
+/* Mobile Styles */
+@media(max-width: 767px) {
+    .main-price-page {
+        margin-top: 90px;
+        padding: 0;
+    }
+    
+    .main-price-page-breadcrumbs {
+        display: none;
+    }
+    
+    .main-price-page-title {
+        font-size: 20px;
+        line-height: 140%;
+        padding: 0 16px 16px 16px;
+        margin-bottom: 16px;
+    }
+    
+    .main-price-page-title::after {
+        width: 80px;
+        height: 3px;
+    }
+    
+    .main-price-page-content {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 16px;
+    }
+    
+    .main-price-page-table-wrapper {
+        gap: 12px;
+    }
+    
+    .main-price-page-organization {
+        font-size: 12px;
+    }
+    
+    .main-price-page-price-list-title {
+        font-size: 16px;
+    }
+    
+    .main-price-page-date {
+        font-size: 12px;
+    }
+    
+    .main-price-page-table {
+        border-radius: 16px;
+        font-size: 12px;
+    }
+    
+    .main-price-page-table-header th {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .main-price-page-table-header-code {
+        width: 80px;
+    }
+    
+    .main-price-page-table-header-price {
+        width: 100px;
+    }
+    
+    .main-price-page-table-category-cell {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .main-price-page-table-row td {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .main-price-page-table-code {
+        width: 80px;
+        font-size: 12px;
+    }
+    
+    .main-price-page-table-price {
+        width: 100px;
+        font-size: 12px;
+    }
+    
+    .main-price-page-info {
+        width: 100%;
+        padding: 24px;
+    }
+    
+    .main-price-page-info::before,
+    .main-price-page-info::after {
+        display: none;
+    }
+    
+    .main-price-page-info-text {
+        font-size: 12px;
+    }
+    
+    .main-price-page-info-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

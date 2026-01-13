@@ -1,0 +1,367 @@
+/* Страница Вакансии (vacancies.html) */
+
+.main-vacancies-article {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-vacancies-contact-info {
+    background: #F3FBFF;
+    border-radius: 24px;
+    padding: 18px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+}
+
+.main-vacancies-contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main-vacancies-contact-label {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #8DB7CF;
+}
+
+.main-vacancies-contact-value {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+}
+
+.main-vacancies-banner {
+    height: 266px;
+    border-radius: 24px;
+    background: #F3FBFF;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+}
+
+.main-vacancies-banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+}
+
+.main-vacancies-banner-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+    color: #232323;
+}
+
+.main-vacancies-banner-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.main-vacancies-banner-button {
+    background: #0082B8;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.main-vacancies-filters {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.main-vacancies-filter-btn {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 27px;
+    padding: 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #0082B8;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.main-vacancies-filter-btn:hover {
+    background: #DCEFF9;
+}
+
+.main-vacancies-filter-btn-active {
+    background: #DCEFF9;
+    color: #005476;
+}
+
+.main-vacancies-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-vacancies-card {
+    background: #F3FBFF;
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-vacancies-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main-vacancies-card-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+}
+
+.main-vacancies-card-salary {
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.01px;
+    color: #0082B8;
+}
+
+.main-vacancies-card-labels {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.main-vacancies-card-label {
+    background: #DCEFF9;
+    border-radius: 16px;
+    padding: 6px;
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #0082B8;
+}
+
+.main-vacancies-card-description {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #333333;
+}
+
+.main-vacancies-card-button {
+    background: #0082B8;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.main-vacancies-card-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media(max-width: 767px) {
+    .main-vacancies-article {
+        padding: 0;
+        gap: 24px;
+    }
+
+    .main-vacancies-contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        padding: 18px;
+        margin: 0;
+    }
+
+    .main-vacancies-contact-item {
+        width: 100%;
+        gap: 4px;
+    }
+
+    .main-vacancies-contact-label {
+        font-size: 12px;
+        line-height: 100%;
+        color: #8DB7CF;
+    }
+
+    .main-vacancies-contact-value {
+        font-size: 16px;
+        line-height: 100%;
+        color: #232323;
+    }
+
+    .main-vacancies-banner {
+        height: 297px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-vacancies-banner-content {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 338px;
+        gap: 16px;
+        z-index: 2;
+    }
+
+    .main-vacancies-banner-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        color: #232323;
+    }
+
+    .main-vacancies-banner-text {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #232323;
+        width: 327px;
+    }
+
+    .main-vacancies-banner-button {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        padding: 12px;
+        width: 214px;
+        align-self: flex-start;
+    }
+
+    .main-vacancies-banner-image {
+        display: block;
+    }
+
+    .main-vacancies-filters {
+        gap: 16px;
+        padding: 0 16px;
+        flex-wrap: wrap;
+    }
+
+    .main-vacancies-filter-btn {
+        font-size: 14px;
+        line-height: 100%;
+        padding: 8px;
+    }
+
+    .main-vacancies-filter-btn-active {
+        background: #DCEFF9;
+        color: #005476;
+    }
+
+    .main-vacancies-list {
+        gap: 16px;
+        padding: 0;
+    }
+
+    .main-vacancies-card {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .main-vacancies-card-header {
+        gap: 8px;
+    }
+
+    .main-vacancies-card-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #232323;
+    }
+
+    .main-vacancies-card-salary {
+        font-family: "Montserrat-Medium";
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18.01px;
+        color: #0082B8;
+    }
+
+    .main-vacancies-card-labels {
+        gap: 8px;
+    }
+
+    .main-vacancies-card-label {
+        font-size: 12px;
+        line-height: 100%;
+        padding: 6px;
+    }
+
+    .main-vacancies-card-description {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #333333;
+    }
+
+    .main-vacancies-card-button {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        padding: 8px;
+        align-self: flex-start;
+    }
+
+    .main-vacancies-card-button svg {
+        width: 18px;
+        height: 18px;
+    }
+}

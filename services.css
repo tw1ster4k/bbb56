@@ -1,0 +1,242 @@
+/* Страница Услуги (services.html) */
+.main-services {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 124px;
+    padding: 0;
+}
+
+.main-services-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 40px;
+    font-family: "Montserrat-SemiBold";
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.main-services-breadcrumbs-item {
+    color: #B8B8B8;
+}
+
+.main-services-breadcrumbs-separator {
+    color: #B8B8B8;
+}
+
+.main-services-breadcrumbs-item-active {
+    color: #0082B8;
+}
+
+.main-services-content {
+    padding: 0 40px 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-services-title {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #0082B8;
+    margin-bottom: 32px;
+}
+
+.main-services-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.main-services-sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.main-services-sidebar-item {
+    background: white;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #0082B8;
+    text-align: left;
+}
+
+.main-services-sidebar-item span {
+    flex: 1;
+}
+
+.main-services-sidebar-item svg {
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.main-services-sidebar-item-active {
+    background: #DCEFF9;
+}
+
+.main-services-article {
+    flex: 1 0 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-services-article-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #232323;
+    width: 800px;
+}
+
+.main-services-article-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+    width: 800px;
+}
+
+.main-services-article-text p {
+    margin-bottom: 16px;
+}
+
+.main-services-article-text p:last-child {
+    margin-bottom: 0;
+}
+
+.main-services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+}
+
+.main-services-card {
+    flex: 1 0 0;
+    min-width: 0;
+    min-width: calc(25% - 18px);
+    height: 241px;
+    background: #F3FBFF;
+    border-radius: 24px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-services-card-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+    flex: 1 0 0;
+    min-width: 0;
+    z-index: 1;
+}
+
+.main-services-card-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+
+.main-services-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+@media(max-width: 767px) {
+    .main-services {
+        margin-top: 90px;
+    }
+    
+    .main-services-breadcrumbs {
+        display: none;
+    }
+    
+    .main-services-content {
+        padding: 0;
+    }
+    
+    .main-services-title {
+        font-size: 20px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: #0082B8;
+        padding: 0 16px;
+        margin-bottom: 0;
+    }
+    
+    .main-services-layout {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0;
+    }
+    
+    .main-services-sidebar {
+        display: none;
+    }
+    
+    .main-services-article {
+        padding: 0;
+        gap: 16px;
+    }
+    
+    .main-services-article-title {
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.8px;
+        color: #0082B8;
+        width: 100%;
+        padding: 0 16px;
+    }
+    
+    .main-services-article-text {
+        font-size: 14px;
+        line-height: 120%;
+        width: 100%;
+        padding: 0 16px;
+    }
+    
+    .main-services-cards {
+        gap: 8px;
+        padding: 0 16px;
+    }
+    
+    .main-services-card {
+        min-width: calc(50% - 4px);
+        height: 167.5px;
+        padding: 16px;
+    }
+    
+    .main-services-card-title {
+        font-size: 14px;
+        line-height: 100%;
+    }
+}
+

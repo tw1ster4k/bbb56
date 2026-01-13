@@ -1,0 +1,196 @@
+/* Страница Лицензии и сертификаты (licenses.html) */
+
+.main-licenses-article {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-licenses-section-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #232323;
+}
+
+.main-licenses-section-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.main-licenses-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-licenses-card {
+    background: #F3FBFF;
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.main-licenses-card-image {
+    width: 124px;
+    height: 187px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.main-licenses-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-licenses-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+}
+
+.main-licenses-card-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.main-licenses-card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main-licenses-card-description-title {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18.01px;
+    color: #0082B8;
+}
+
+.main-licenses-card-description-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18.01px;
+    color: #333333;
+}
+
+.main-licenses-card-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-licenses-card-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media(max-width: 767px) {
+    .main-licenses-article {
+        padding: 0;
+        gap: 24px;
+    }
+    
+    .main-licenses-section-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.8px;
+        color: #232323;
+        padding: 0 16px;
+    }
+    
+    .main-licenses-section-text {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #232323;
+        padding: 0 16px;
+    }
+    
+    .main-licenses-cards {
+        gap: 16px;
+        padding: 0 16px;
+    }
+    
+    .main-licenses-card {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .main-licenses-card-image {
+        width: 124px;
+        height: 187px;
+    }
+    
+    .main-licenses-card-content {
+        gap: 16px;
+        position: relative;
+    }
+    
+    .main-licenses-card-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        color: #232323;
+    }
+    
+    .main-licenses-card-description {
+        gap: 0;
+    }
+    
+    .main-licenses-card-description-title {
+        font-family: "Montserrat-Bold";
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18.01px;
+        color: #0082B8;
+        margin-bottom: 8px;
+    }
+    
+    .main-licenses-card-description-text {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18.01px;
+        color: #333333;
+    }
+    
+    .main-licenses-card-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #FFFFFF;
+        border-radius: 27px;
+        padding: 12px;
+    }
+}

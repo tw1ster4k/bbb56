@@ -1,0 +1,227 @@
+/* Vacancy Detail Page Styles */
+
+.main-vacancy-detail-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    max-width: 1360px;
+    overflow-x: hidden;
+}
+
+.main-vacancy-detail-content {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-vacancy-detail-section {
+    padding: 16px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-vacancy-detail-section-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+    margin: 0;
+}
+
+.main-vacancy-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.main-vacancy-detail-list li {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #333333;
+    margin-bottom: 16px;
+    padding-left: 21px;
+    position: relative;
+}
+
+.main-vacancy-detail-list li:last-child {
+    margin-bottom: 0;
+}
+
+.main-vacancy-detail-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #333333;
+}
+
+.main-vacancy-detail-sidebar {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-vacancy-detail-info {
+    background: #F3FBFF;
+    border-radius: 24px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.main-vacancy-detail-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main-vacancy-detail-info-label {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #8DB7CF;
+}
+
+.main-vacancy-detail-info-value {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+}
+
+.main-vacancy-detail-cta {
+    height: 354px;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f3fbff 0%, #e8f5fa 100%);
+}
+
+.main-vacancy-detail-cta-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 140%;
+    color: #232323;
+    margin: 0;
+}
+
+.main-vacancy-detail-cta-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+    margin: 0;
+}
+
+.main-vacancy-detail-cta-button {
+    background: #0082B8;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #FFFFFF;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Mobile Responsive */
+@media(max-width: 767px) {
+    .main-vacancy-detail-layout {
+        flex-direction: column;
+        gap: 24px;
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main-vacancy-detail-content {
+        width: 100%;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .main-vacancy-detail-section {
+        padding: 16px;
+        gap: 24px;
+    }
+
+    .main-vacancy-detail-section-title {
+        font-size: 20px;
+        line-height: 100%;
+    }
+
+    .main-vacancy-detail-list li {
+        font-size: 14px;
+        line-height: 120%;
+        margin-bottom: 16px;
+    }
+
+    .main-vacancy-detail-sidebar {
+        width: 100%;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .main-vacancy-detail-info {
+        padding: 18px;
+        gap: 24px;
+    }
+
+    .main-vacancy-detail-info-label {
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+    .main-vacancy-detail-info-value {
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    .main-vacancy-detail-cta {
+        height: auto;
+        min-height: 354px;
+        padding: 24px;
+        gap: 24px;
+    }
+
+    .main-vacancy-detail-cta-title {
+        font-size: 32px;
+        line-height: 140%;
+    }
+
+    .main-vacancy-detail-cta-text {
+        font-size: 16px;
+        line-height: 120%;
+    }
+
+    .main-vacancy-detail-cta-button {
+        padding: 12px;
+        font-size: 20px;
+        line-height: 100%;
+    }
+}
