@@ -1,0 +1,49 @@
+/* 
+  ⚠️ TEMP VALUES
+  PDF не содержит данных о цветах, отступах и шрифтах.
+  Все значения ниже временные и подлежат замене после Figma.
+*/
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 124px;
+    padding: 0;
+}
+
+.hero {
+  margin-bottom: 48px; /* TEMP */
+}
+
+.hero h1 {
+  font-size: 40px; /* TEMP */
+  font-family: "Montserrat-Bold";
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #0082b8;
+}
+
+.hero p {
+  font-size: 16px; /* TEMP */
+  line-height: 1.5; /* TEMP */
+}
+
+.content article {
+  margin-bottom: 40px; /* TEMP */
+}
+
+.content h2 {
+  font-size: 24px; /* TEMP */
+  margin-bottom: 12px; /* TEMP */
+}
+
+.content p,
+.content li {
+  font-size: 16px; /* TEMP */
+  line-height: 1.6; /* TEMP */
+}
+
+ul {
+  padding-left: 20px; /* TEMP */
+}

@@ -1613,6 +1613,7 @@ a{
     border-radius: 24px;
     background: #F3FBFF;
     display: flex;
+    text-decoration: none;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 24px;
