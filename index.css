@@ -2071,6 +2071,7 @@ li a{
     background: #F3FBFF;
     margin-right: 24px;
     margin-bottom: 24px;
+    text-decoration: none;
 }
 
 .main-blog-content-cards-card-img{
@@ -2114,6 +2115,7 @@ li a{
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
     overflow: hidden;
+    color: #333;
 }
 
 @media(max-width:767px){
