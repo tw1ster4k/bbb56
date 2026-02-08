@@ -84,6 +84,7 @@ a{
 .logo{
     width: 182px;
     height: 32px;
+    margin-right: 24px;
 }
 .search{
     height: 24px;
@@ -97,6 +98,7 @@ a{
     color: #8DB7CF;
     font-weight: 500;
     font-family: "Montserrat-Medium";
+    margin-right: 24px;
 }
 .tel-link{
     font-size: 16px;
@@ -105,6 +107,11 @@ a{
     text-decoration: none;
     color: #232323;
     font-family: "Montserrat-SemiBold";
+    margin-right: 16px;
+}
+
+.messengers{
+    margin-right: 16px;
 }
 
 .call-btn{
@@ -124,6 +131,7 @@ a{
     justify-content: space-between;
     height: 35px;
     cursor: pointer;
+    margin-right: 8px;
 }
 
 .call-btn:hover{
@@ -164,7 +172,6 @@ a{
 .first-line{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
     height: 48px;
     align-items: center;
 }
@@ -179,11 +186,20 @@ a{
     display: flex;
     align-items: center;
     text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 27px;
+}
+.html-anchor:hover{
+    background-color: #F3FBFF;
+}
+.html-anchor:active{
+    background-color: #DCEFF9;
 }
 .second-line{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .html-anchor-img{
     margin-right: 4px;
@@ -225,8 +241,8 @@ a{
 .achievements{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 24px;
+    justify-content: center;
     padding-top: 80px;
     padding-right: 140px;
     padding-bottom: 80px;
@@ -234,8 +250,8 @@ a{
 }
 
 .achievements-card{
-    width: 232px;
-    height: 232px;
+    width: 248px;
+    height: 248px;
     padding: 24px;
     background: #F7FBFF;
     border-radius: 24px;
@@ -430,6 +446,7 @@ a{
 
 .loyalty-logo{
     margin-bottom: 33px;
+
 }
 
 .loyalty-title{
@@ -4702,4 +4719,10 @@ ol li{
         height: 92px;
         -webkit-line-clamp: 5;
     }
+}
+.header-mobile-menu{
+    padding: 8px;
+    background: #DCEFF9;
+    border-radius: 27px;
+    margin-right: 8px;
 }
