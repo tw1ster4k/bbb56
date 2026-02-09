@@ -105,3 +105,41 @@ ul {
     gap: 24px;
     flex-wrap: wrap;
 }
+
+@media(max-width:767px){
+  main{
+    margin-top: 60px;
+  }
+  .hero h1{
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
+    font-size: 20px;
+    line-height: 140%;
+    padding: 16px;
+  }
+  .article-main-img{
+    height: 124px;
+  }
+  article{
+    padding: 16px;
+  }
+  .content article p{
+    font-size: 14px;
+  }
+  .content article img{
+    height: 180px;
+  }
+  .content article{
+    margin-bottom: 20px;
+  }
+  .content h2{
+    font-size: 20px;
+  }
+  .content li{
+    font-size: 14px;
+    line-height: 120%;
+  }
+  .hero{
+    margin-bottom: 16px;
+  }
+}

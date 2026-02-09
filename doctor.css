@@ -1,0 +1,579 @@
+/* Doctor Page Mobile Styles - строго по Figma макету */
+
+/* Mobile Header */
+.doctor-mobile-header {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    width: 100%;
+}
+
+.doctor-mobile-header-btn {
+    background: #DCEFF9;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+.doctor-mobile-header-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.doctor-mobile-logo {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+}
+
+.doctor-mobile-logo img:first-child {
+    width: 33.886px;
+    height: 34px;
+}
+
+.doctor-mobile-logo img:last-child {
+    width: 138px;
+    height: 31.077px;
+    margin-top: 2px;
+}
+
+/* Doctor Title */
+.doctor-page-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #0082B8;
+    text-transform: uppercase;
+    padding: 0 16px;
+    margin: 16px 0;
+}
+
+/* Doctor Card */
+.doctor-card-mobile {
+    background: #F3FBFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.doctor-card-mobile-image {
+    width: 100%;
+    height: 304px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.doctor-card-mobile-content {
+    padding: 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.doctor-card-mobile-name {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #232323;
+    margin-bottom: 4px;
+}
+
+.doctor-card-mobile-position {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #0082B8;
+}
+
+.doctor-card-mobile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-card-mobile-info-item {
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18.01px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.doctor-card-mobile-info-item span:first-child {
+    color: #333;
+}
+
+.doctor-card-mobile-info-item span:last-child {
+    color: #0082B8;
+}
+
+.doctor-card-mobile-info-item a {
+    color: #0082B8;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.doctor-card-mobile-info-item a img {
+    width: 18px;
+    height: 18px;
+}
+
+.doctor-card-mobile-video-btn {
+    background: #DCEFF9;
+    border: none;
+    border-radius: 27px;
+    padding: 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #0082B8;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* About Doctor Section */
+.doctor-about-section {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.doctor-about-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #232323;
+    text-transform: uppercase;
+}
+
+.doctor-about-subsection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.doctor-about-subsection-title {
+    font-family: "Montserrat-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.doctor-about-subsection-content {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+}
+
+.doctor-about-subsection-content ul {
+    list-style: disc;
+    margin-left: 21px;
+    margin-bottom: 16px;
+}
+
+.doctor-about-subsection-content li {
+    margin-bottom: 16px;
+}
+
+.doctor-about-subsection-content li:last-child {
+    margin-bottom: 0;
+}
+
+.doctor-about-subsection-content p {
+    margin-bottom: 16px;
+}
+
+.doctor-about-subsection-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Doctor Certificates */
+.doctor-certificates {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.doctor-certificate {
+    flex: 1;
+    height: 220px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* Online Appointment Block */
+.doctor-online-block {
+    position: relative;
+    height: 245px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 16px 0;
+    background: linear-gradient(100.26358759382866deg, rgb(234, 174, 255) 1.342%, rgb(158, 221, 255) 25.02%, rgb(175, 232, 255) 52.151%, rgb(158, 221, 255) 74.349%, rgb(234, 174, 255) 100%);
+}
+
+.doctor-online-content {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 338px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 2;
+}
+
+.doctor-online-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #232323;
+}
+
+.doctor-online-text {
+    font-family: "Montserrat-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #232323;
+    width: 327px;
+}
+
+.doctor-online-btn {
+    background: #0082B8;
+    border: none;
+    border-radius: 27px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: white;
+    cursor: pointer;
+    width: 214px;
+}
+
+.doctor-online-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Footer */
+.doctor-mobile-footer {
+    background: #F3FBFF;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.doctor-mobile-footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctor-mobile-footer-logo img:first-child {
+    width: 33.886px;
+    height: 34px;
+}
+
+.doctor-mobile-footer-logo img:last-child {
+    width: 138px;
+    height: 31.077px;
+    margin-left: 44px;
+    margin-top: 2px;
+}
+
+.doctor-mobile-footer-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.doctor-mobile-footer-btn {
+    flex: 1;
+    border: none;
+    border-radius: 27px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+.doctor-mobile-footer-btn:first-child {
+    background: #0082B8;
+    color: white;
+}
+
+.doctor-mobile-footer-btn:last-child {
+    background: #DCEFF9;
+    color: #0082B8;
+}
+
+.doctor-mobile-footer-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.doctor-mobile-footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.doctor-mobile-footer-section-title {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #0082B8;
+    text-align: center;
+    letter-spacing: 0.8px;
+}
+
+.doctor-mobile-footer-catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doctor-mobile-footer-catalog-item {
+    background: white;
+    border-radius: 27px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #0082B8;
+    text-align: center;
+    text-decoration: none;
+}
+
+.doctor-mobile-footer-catalog-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.doctor-mobile-footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doctor-mobile-footer-contact {
+    background: #F3FBFF;
+    border-radius: 71px;
+    padding: 6px 16px 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #232323;
+    text-align: center;
+}
+
+.doctor-mobile-footer-contact img {
+    width: 24px;
+    height: 24px;
+}
+
+.doctor-mobile-footer-socials {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.doctor-mobile-footer-social {
+    width: 34px;
+    height: 34px;
+    border-radius: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-mobile-footer-social:first-child {
+    background: transparent;
+}
+
+.doctor-mobile-footer-social:nth-child(2) {
+    background: #0dc143;
+}
+
+.doctor-mobile-footer-social:last-child {
+    background: #469cff;
+}
+
+.doctor-mobile-footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+.doctor-mobile-footer-working-hours {
+    background: #F3FBFF;
+    border-radius: 71px;
+    padding: 6px 16px 6px 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #232323;
+    white-space: pre-line;
+}
+
+.doctor-mobile-footer-reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.doctor-mobile-footer-reviews-row {
+    display: flex;
+    gap: 8px;
+}
+
+.doctor-mobile-footer-review {
+    flex: 1;
+    height: 70px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.doctor-mobile-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 89px;
+    justify-content: center;
+}
+
+.doctor-mobile-footer-link {
+    background: #F3FBFF;
+    border-radius: 71px;
+    padding: 6px 16px 6px 8px;
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #0082B8;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.doctor-mobile-footer-disclaimer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.doctor-mobile-footer-disclaimer-text {
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100%;
+    color: #8db7cf;
+}
+
+.doctor-mobile-footer-copyright {
+    font-family: "Montserrat-SemiBold";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    color: #8db7cf;
+    text-align: center;
+}
+
+/* Hide desktop elements on mobile */
+@media (max-width: 767px) {
+    .navbar .first-line,
+    .navbar .second-line,
+    .navbar .mobile-line {
+        display: none;
+    }
+    
+    .page {
+        padding: 0;
+    }
+    
+    .sidebar,
+    .sidebar-title {
+        display: none;
+    }
+    
+    .content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .doctor-card,
+    .about,
+    .zapisatya-doctor {
+        display: none;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+}
+
+/* Desktop styles - скрыть мобильные элементы */
+@media (min-width: 768px) {
+    .doctor-mobile-header,
+    .doctor-page-title,
+    .doctor-card-mobile,
+    .doctor-about-section,
+    .doctor-online-block,
+    .doctor-mobile-footer {
+        display: none;
+    }
+}

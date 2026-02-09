@@ -152,7 +152,7 @@
 /* Mobile Responsive */
 @media(max-width: 767px) {
     .main-vacancy-detail-layout {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 24px;
         max-width: 100%;
         width: 100%;
@@ -223,5 +223,9 @@
         padding: 12px;
         font-size: 20px;
         line-height: 100%;
+    }
+    .main-vacancy-detail-sidebar{
+        padding: 0;
+        margin-top: 16px;
     }
 }

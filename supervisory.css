@@ -104,7 +104,9 @@
 .main-supervisory-org-detail-value a:hover {
     text-decoration: underline;
 }
-
+.main-clinic-article{
+    gap:0px;
+}
 @media(max-width: 767px) {
     .main-supervisory-section-title {
         font-size: 16px;
@@ -124,6 +126,7 @@
     .main-supervisory-orgs {
         padding: 0 16px;
         gap: 16px;
+        margin-bottom: 16px;
     }
     
     .main-supervisory-org-card {
