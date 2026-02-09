@@ -194,3 +194,143 @@
         padding: 12px;
     }
 }
+
+/* Модальное окно для просмотра полного изображения */
+.license-image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.license-image-modal.active {
+    display: flex;
+}
+
+.license-image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.license-image-modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.license-image-modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.license-image-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.license-image-modal-close svg {
+    width: 24px;
+    height: 24px;
+    stroke: white;
+}
+
+/* Стили для кликабельных изображений */
+.main-licenses-card-image {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-licenses-card-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 130, 184, 0.3);
+}
+
+/* Карусель отзывов */
+.main-clinic-reviews-grid {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 16px;
+    padding: 0 140px;
+}
+
+.main-clinic-review-card {
+    display: none;
+    flex-shrink: 0;
+}
+
+.main-clinic-review-card.active {
+    display: flex;
+}
+
+.main-clinic-reviews-pagination {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.main-clinic-reviews-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #DCEFF9;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.main-clinic-reviews-dot:hover {
+    transform: scale(1.2);
+}
+
+.main-clinic-reviews-dot-active {
+    background: #0082B8;
+    width: 24px;
+    border-radius: 4px;
+}
+
+@media(max-width: 767px) {
+    .license-image-modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    
+    .license-image-modal-close {
+        top: -50px;
+        right: -10px;
+    }
+    
+    .main-clinic-reviews-grid {
+        padding: 0;
+    }
+    
+    .main-clinic-review-card {
+        width: 100%;
+        min-width: 100%;
+    }
+}
