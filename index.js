@@ -1,44 +1,127 @@
-const navbarBtn = document.querySelector(".mobile-line-menu");
-const navbarMobil = document.querySelector(".mobile-line");
+document.addEventListener('DOMContentLoaded', function () {
+    const navbarBtn = document.querySelector(".mobile-line-menu");
+    const navbarMobil = document.querySelector(".mobile-line");
 
-if (navbarBtn && navbarMobil) {
-navbarBtn.addEventListener("click", function(e) {
-    if(navbarBtn.classList.contains('active')){
-        navbarBtn.classList.remove('active')
-        navbarBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
-                        <path d="M14.25 17C14.25 16.5858 14.5858 16.25 15 16.25H33C33.4142 16.25 33.75 16.5858 33.75 17C33.75 17.4142 33.4142 17.75 33 17.75H15C14.5858 17.75 14.25 17.4142 14.25 17Z" fill="#0082B8"/>
-                        <path d="M14.25 24C14.25 23.5858 14.5858 23.25 15 23.25H33C33.4142 23.25 33.75 23.5858 33.75 24C33.75 24.4142 33.4142 24.75 33 24.75H15C14.5858 24.75 14.25 24.4142 14.25 24Z" fill="#0082B8"/>
-                        <path d="M15 30.25C14.5858 30.25 14.25 30.5858 14.25 31C14.25 31.4142 14.5858 31.75 15 31.75H33C33.4142 31.75 33.75 31.4142 33.75 31C33.75 30.5858 33.4142 30.25 33 30.25H15Z" fill="#0082B8"/>
-                        </svg>`;
-    }else{
-        navbarBtn.classList.add('active')
-        navbarBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-        <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
-        <path d="M18.5303 17.4697C18.2374 17.1768 17.7626 17.1768 17.4697 17.4697C17.1768 17.7626 17.1768 18.2374 17.4697 18.5303L22.9393 24L17.4697 29.4697C17.1768 29.7626 17.1768 30.2374 17.4697 30.5303C17.7626 30.8232 18.2374 30.8232 18.5303 30.5303L24 25.0607L29.4697 30.5303C29.7626 30.8232 30.2374 30.8232 30.5303 30.5303C30.8232 30.2374 30.8232 29.7626 30.5303 29.4697L25.0607 24L30.5303 18.5303C30.8232 18.2374 30.8232 17.7626 30.5303 17.4697C30.2374 17.1768 29.7626 17.1768 29.4697 17.4697L24 22.9393L18.5303 17.4697Z" fill="#0082B8"/>
-        </svg>`;
-    navbarMobil.innerHTML += `
-                <div class="navbar-mobile-block">
-                <a class="navbar-mobile-block-point">Услуги</a>
-                <a class="navbar-mobile-block-point">Специалисты</a>
-                <a class="navbar-mobile-block-point">Клиника</a>
-                <a class="navbar-mobile-block-point">Контакты</a>
-                <a class="navbar-mobile-block-point">Отзывы</a>
-                <a class="navbar-mobile-block-point">COVID-19</a>
-                <a class="navbar-mobile-block-point">Пациенту</a>
-                <a class="navbar-mobile-block-point">Новости и акции</a>
-                <a class="navbar-mobile-block-point">FAQ</a>
-                <a class="navbar-mobile-block-point">Наш блог</a>
-                <svg style="margin-top:16px;margin-bottom:32px;" xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none">
-                <path d="M0 1H343" stroke="#DCEFF9"/>
-                </svg>
-                <div class="navbar-mobile-block-phones">
-                </div>
-                </div>
-                `
-    }
-})
-}
+    if (!navbarBtn || !navbarMobil) return;
+
+    const burgerSvg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
+            <path d="M14.25 17C14.25 16.5858 14.5858 16.25 15 16.25H33C33.4142 16.25 33.75 16.5858 33.75 17C33.75 17.4142 33.4142 17.75 33 17.75H15C14.5858 17.75 14.25 17.4142 14.25 17Z" fill="#0082B8"/>
+            <path d="M14.25 24C14.25 23.5858 14.5858 23.25 15 23.25H33C33.4142 23.25 33.75 23.5858 33.75 24C33.75 24.4142 33.4142 24.75 33 24.75H15C14.5858 24.75 14.25 24.4142 14.25 24Z" fill="#0082B8"/>
+            <path d="M15 30.25C14.5858 30.25 14.25 30.5858 14.25 31C14.25 31.4142 14.5858 31.75 15 31.75H33C33.4142 31.75 33.75 31.4142 33.75 31C33.75 30.5858 33.4142 30.25 33 30.25H15Z" fill="#0082B8"/>
+        </svg>
+    `;
+
+    const closeSvg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
+            <path d="M18.5303 17.4697C18.2374 17.1768 17.7626 17.1768 17.4697 17.4697C17.1768 17.7626 17.1768 18.2374 17.4697 18.5303L22.9393 24L17.4697 29.4697C17.1768 29.7626 17.1768 30.2374 17.4697 30.5303C17.7626 30.8232 18.2374 30.8232 18.5303 30.5303L24 25.0607L29.4697 30.5303C29.7626 30.8232 30.2374 30.8232 30.5303 30.5303C30.8232 30.2374 30.8232 29.7626 30.5303 29.4697L25.0607 24L30.5303 18.5303C30.8232 18.2374 30.8232 17.7626 30.5303 17.4697C30.2374 17.1768 29.7626 17.1768 29.4697 17.4697L24 22.9393L18.5303 17.4697Z" fill="#0082B8"/>
+        </svg>
+    `;
+
+    const menuHtml = `
+        <div class="navbar-mobile-block">
+          <a class="navbar-mobile-block-point" href="services.html">
+              <img style="margin-right:4px" src="images/navbaricons/tooth.svg" alt="">
+            Услуги
+          </a>
+
+          <a class="navbar-mobile-block-point" href="price.html">
+                <img style="margin-right:4px" src="images/navbaricons/money-3.svg" alt="">Цены
+          </a>
+
+          <a class="navbar-mobile-block-point" href="doctors.html">
+            <img style="margin-right:4px" src="images/navbaricons/user-group.svg" alt="">Специалисты
+          </a>
+
+          <a class="navbar-mobile-block-point" href="clinic.html">
+            <img style="margin-right:4px" src="images/navbaricons/first-aid.svg" alt="">Клиника
+          </a>
+
+          <a class="navbar-mobile-block-point" href="contacts.html">
+            <img style="margin-right:4px" src="images/navbaricons/contacts.svg" alt="">Контакты
+          </a>
+
+          <a class="navbar-mobile-block-point" href="reviews.html">
+            <img style="margin-right:4px" src="images/navbaricons/message-3.svg" alt="">Отзывы
+          </a>
+
+          <a class="navbar-mobile-block-point" href="covid.html">
+            <img style="margin-right:4px" src="images/navbaricons/syringe.svg" alt="">COVID-19
+          </a>
+
+          <a class="navbar-mobile-block-point" href="patient.html">
+            <img style="margin-right:4px" src="images/navbaricons/pill.svg" alt="">Пациенту
+          </a>
+
+          <a class="navbar-mobile-block-point" href="news.html">
+            <img style="margin-right:4px" src="images/navbaricons/tag.svg" alt="">Новости и акции
+          </a>
+
+          <a class="navbar-mobile-block-point" href="faq.html">
+            <img style="margin-right:4px" src="images/navbaricons/help.svg" alt="">FAQ
+          </a>
+
+          <a class="navbar-mobile-block-point" href="blog.html">
+            <img style="margin-right:4px" src="images/navbaricons/paste.svg" alt="">Наш блог
+          </a>
+
+          <svg style="margin-top:16px;margin-bottom:32px;" xmlns="http://www.w3.org/2000/svg" width="343" height="2" viewBox="0 0 343 2" fill="none">
+            <path d="M0 1H343" stroke="#DCEFF9"/>
+          </svg>
+
+          <div class="navbar-mobile-block-bottom">
+            <div class="navbar-mobile-block-actions">
+              <button type="button" class="navbar-mobile-btn navbar-mobile-btn-primary call-btn">
+                  <img style="margin-right:4px" src="images/navbaricons/call.svg" alt="">Заказать звонок
+              </button>
+
+              <a href="https://t.me/..." class="navbar-mobile-btn navbar-mobile-btn-secondary" target="_blank" rel="noopener">
+                  <img src="images/icon/telegram2.svg" alt="">Онлайн запись
+              </a>
+            </div>
+
+            <div class="navbar-mobile-block-phone">
+              +7 (3532) 66-20-02
+            </div>
+
+            <div class="navbar-mobile-block-socials">
+              <a href="https://vk.com/..." class="navbar-mobile-social" target="_blank" rel="noopener">
+                <img src="images/vk.svg" alt="VK">
+              </a>
+              <a href="https://wa.me/..." class="navbar-mobile-social" target="_blank" rel="noopener">
+                <img src="images/wa.svg" alt="WhatsApp">
+              </a>
+              <a href="https://t.me/..." class="navbar-mobile-social" target="_blank" rel="noopener">
+                <img src="images/tg.svg" alt="Telegram">
+              </a>
+            </div>
+          </div>
+        </div>
+    `;
+
+    // начальное состояние – бургер и закрытое меню
+    navbarBtn.innerHTML = burgerSvg;
+
+    navbarBtn.addEventListener("click", function () {
+        const isOpen = navbarBtn.classList.toggle('active');
+
+        // меняем иконку
+        navbarBtn.innerHTML = isOpen ? closeSvg : burgerSvg;
+
+        // удаляем предыдущий блок меню, если он был
+        const existingMenu = navbarMobil.querySelector('.navbar-mobile-block');
+        if (existingMenu) {
+            existingMenu.remove();
+        }
+
+        // если открываем – вставляем меню
+        if (isOpen) {
+            navbarMobil.insertAdjacentHTML('beforeend', menuHtml);
+        }
+    });
+});
 
 
 

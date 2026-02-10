@@ -94,6 +94,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    margin-bottom: 16px;
 }
 
 .main-services-article-title {
@@ -132,8 +133,8 @@
 .main-services-card {
     flex: 1 0 0;
     min-width: 0;
-    min-width: calc(25% - 18px);
-    height: 241px;
+    min-width: 193px;
+    height: 193px;
     background: #F3FBFF;
     border-radius: 24px;
     padding: 24px;
@@ -188,7 +189,8 @@
         line-height: 140%;
         text-transform: uppercase;
         color: #0082B8;
-        padding: 0 16px;
+        padding: 0px;
+        margin-left: 16px;
         margin-bottom: 0;
     }
     
@@ -212,25 +214,28 @@
         line-height: 100%;
         letter-spacing: 0.8px;
         color: #0082B8;
-        width: 100%;
-        padding: 0 16px;
+        width: 90%;
+        padding: 0px;
+        margin-left: 16px;
     }
     
     .main-services-article-text {
         font-size: 14px;
         line-height: 120%;
         width: 100%;
-        padding: 0 16px;
+        padding: 0px;
+        margin-left: 16px;
+        width: 90%;
     }
     
     .main-services-cards {
         gap: 8px;
-        padding: 0 16px;
+        padding: 0px;
     }
     
     .main-services-card {
-        min-width: calc(50% - 4px);
-        height: 167.5px;
+        min-width: 136px;
+        height: 152px;
         padding: 16px;
     }
     

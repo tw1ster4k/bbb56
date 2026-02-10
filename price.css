@@ -195,39 +195,23 @@
 .main-price-page-info {
     width: 450px;
     flex-shrink: 0;
-    background: linear-gradient(135deg, #F3FBFF 0%, #E8F4FA 100%);
+    background: url(./images/priceframe.svg);
     border-radius: 24px;
     padding: 32px;
     position: relative;
     overflow: hidden;
+    height: 438px;
+}
+.main-price-page-info::after{
+    content:  url(./images/priceframeafter.svg);
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 0;
 }
 
 /* Декоративные элементы зубов - требуют загрузки из Figma через MCP API */
-.main-price-page-info::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 200px;
-    height: 200px;
-    background: url('./images/price-info-tooth-1.svg') no-repeat right top;
-    background-size: contain;
-    opacity: 0.3;
-    pointer-events: none;
-}
 
-.main-price-page-info::after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 150px;
-    height: 150px;
-    background: url('./images/price-info-tooth-2.svg') no-repeat right bottom;
-    background-size: contain;
-    opacity: 0.3;
-    pointer-events: none;
-}
 
 .main-price-page-info-content {
     position: relative;
@@ -243,6 +227,7 @@
     font-size: 14px;
     line-height: 120%;
     color: #232323;
+    width: 347px;
 }
 
 .main-price-page-info-link {
@@ -260,18 +245,19 @@
     background: #0082B8;
     border: none;
     border-radius: 27px;
-    padding: 12px 24px;
+    padding: 12px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Montserrat-SemiBold";
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 100%;
     color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 8px;
+    width: 338px;
 }
 
 .main-price-page-info-btn:hover {
@@ -308,11 +294,12 @@
     .main-price-page-content {
         flex-direction: column;
         gap: 16px;
-        padding: 0 16px;
     }
     
     .main-price-page-table-wrapper {
         gap: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     
     .main-price-page-organization {
@@ -338,11 +325,11 @@
     }
     
     .main-price-page-table-header-code {
-        width: 80px;
+        width: 25px;
     }
     
     .main-price-page-table-header-price {
-        width: 100px;
+        width: 25px;
     }
     
     .main-price-page-table-category-cell {
@@ -366,19 +353,17 @@
     }
     
     .main-price-page-info {
-        width: 100%;
+        max-width: 327px;
         padding: 24px;
+        margin-bottom: 16px;
+        overflow: hidden;
     }
     
-    .main-price-page-info::before,
-    .main-price-page-info::after {
-        display: none;
-    }
     
     .main-price-page-info-text {
-        font-size: 12px;
+        width: 286px;
     }
-    
+
     .main-price-page-info-btn {
         font-size: 14px;
         padding: 10px 20px;
