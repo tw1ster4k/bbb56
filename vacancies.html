@@ -166,11 +166,7 @@
                     
                     <div class="main-vacancies-banner">
                         <div class="main-vacancies-banner-content">
-                            <h2 class="main-vacancies-banner-title">Присоединяйтесь к нашей команде!</h2>
-                            <p class="main-vacancies-banner-text">
-                                Присоединяйтесь к нашей команде инициативных и увлеченных своим делом специалистов, готовых решать сложные задачи и оказывать самые качественные услуги в городе!
-                            </p>
-                            <button class="main-vacancies-banner-button">Отправить резюме</button>
+                            <button class="main-vacancies-banner-button" id="open-resume-modal">Отправить резюме</button>
                         </div>
                     </div>
                     
@@ -339,5 +335,208 @@
         </label>
         <button class="modal-btn">Отправить</button>
     </div>
-    <script src="/index.js" ></script></body>
+    <!-- Modal Resume -->
+    <div class="modal-resume-overlay" id="resume-modal-overlay"></div>
+    <div class="modal-resume" id="resume-modal">
+        <div class="modal-resume-close" id="close-resume-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;" xml:space="preserve">
+                <g>
+                    <g id="cross">
+                        <g>
+                            <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0     L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61     c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576     c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <form id="resume-form">
+            <div class="modal-resume-input-group">
+                <label class="modal-resume-label">
+                    <span>Ваше имя</span>
+                    <span class="modal-resume-label-required">*</span>
+                </label>
+                <div class="modal-resume-input-wrapper">
+                    <input type="text" class="modal-resume-input" placeholder="Введите ваше имя" required style="padding-left: 12px;" />
+                </div>
+            </div>
+            
+            <div class="modal-resume-input-group">
+                <label class="modal-resume-label">
+                    <span>Телефон</span>
+                    <span class="modal-resume-label-required">*</span>
+                </label>
+                <div class="modal-resume-input-wrapper">
+                    <div class="modal-resume-input-icon">
+                        <img src="./images/icon/call.svg" alt="" />
+                    </div>
+                    <input type="tel" id="resume-phone" class="modal-resume-input" placeholder="+7 (XXX) XXX XX XX" required />
+                </div>
+            </div>
+            
+            <div class="modal-resume-input-group">
+                <label class="modal-resume-label">
+                    <span>E-mail</span>
+                </label>
+                <div class="modal-resume-input-wrapper">
+                    <div class="modal-resume-input-icon">
+                        <img src="./images/icon/mail.svg" alt="" />
+                    </div>
+                    <input type="email" class="modal-resume-input" placeholder="Example@domain.ru" />
+                </div>
+            </div>
+            
+            <div class="modal-resume-input-group">
+                <label class="modal-resume-label">
+                    <span>Желаемая должность</span>
+                    <span class="modal-resume-label-required">*</span>
+                </label>
+                <div class="modal-resume-input-wrapper">
+                    <select class="modal-resume-select" required>
+                        <option value="">Выберите из списка</option>
+                        <option value="doctor">Врач-стоматолог</option>
+                        <option value="nurse">Медицинская сестра/Медицинский брат</option>
+                        <option value="manager">Менеджер</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="modal-resume-input-group">
+                <label class="modal-resume-label">
+                    <span>Дополнительная информация</span>
+                </label>
+                <textarea class="modal-resume-textarea" placeholder="Хотите что-то добавить?"></textarea>
+            </div>
+            
+            <div class="modal-resume-file-group">
+                <label class="modal-resume-label">
+                    <span>Файл с резюме</span>
+                </label>
+                <div class="modal-resume-file-wrapper">
+                    <button type="button" class="modal-resume-file-btn" id="file-upload-btn">
+                        <img src="./images/icon/import.svg" alt="" />
+                        <span>Загрузить</span>
+                    </button>
+                    <input type="file" id="resume-file" class="modal-resume-file-input" accept=".pdf,.doc,.docx" />
+                    <span class="modal-resume-file-info">1 файл до 40 мб</span>
+                </div>
+            </div>
+            
+            <div class="modal-resume-recaptcha-wrapper">
+                <p class="modal-resume-recaptcha-label">Подтвердите, что вы не робот:</p>
+                <div class="modal-resume-recaptcha" id="recaptcha-container"></div>
+            </div>
+            
+            <div class="modal-resume-checkbox-wrapper">
+                <input type="checkbox" id="resume-consent" class="modal-resume-checkbox" required />
+                <label for="resume-consent" class="modal-resume-checkbox-label">
+                    Я согласен на <a href="/policy">обработку персональных данных</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="modal-resume-submit-btn">Отправить</button>
+        </form>
+    </div>
+    
+    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+    <script src="/index.js" ></script>
+    <script>
+        // Phone formatting
+        const resumePhoneInput = document.getElementById('resume-phone');
+        if (resumePhoneInput) {
+            resumePhoneInput.addEventListener('input', () => {
+                let value = resumePhoneInput.value.replace(/\D/g, '');
+                const maxLength = 11;
+                
+                if (value.length > maxLength) {
+                    value = value.slice(0, maxLength);
+                }
+                
+                let formatted = '+7 ';
+                if (value.length > 1) {
+                    formatted += '(' + value.slice(1, 4);
+                }
+                if (value.length >= 4) {
+                    formatted += ') ' + value.slice(4, 7);
+                }
+                if (value.length >= 7) {
+                    formatted += '-' + value.slice(7, 9);
+                }
+                if (value.length >= 9) {
+                    formatted += '-' + value.slice(9, 11);
+                }
+                
+                resumePhoneInput.value = formatted;
+            });
+        }
+        
+        // File upload
+        const fileUploadBtn = document.getElementById('file-upload-btn');
+        const resumeFileInput = document.getElementById('resume-file');
+        if (fileUploadBtn && resumeFileInput) {
+            fileUploadBtn.addEventListener('click', () => {
+                resumeFileInput.click();
+            });
+        }
+        
+        // Modal open/close
+        const openResumeModalBtn = document.getElementById('open-resume-modal');
+        const resumeModal = document.getElementById('resume-modal');
+        const closeResumeModalBtn = document.getElementById('close-resume-modal');
+        
+        const resumeModalOverlay = document.getElementById('resume-modal-overlay');
+        
+        if (openResumeModalBtn && resumeModal) {
+            openResumeModalBtn.addEventListener('click', () => {
+                resumeModal.classList.add('active');
+                if (resumeModalOverlay) resumeModalOverlay.classList.add('active');
+            });
+        }
+        
+        if (closeResumeModalBtn && resumeModal) {
+            closeResumeModalBtn.addEventListener('click', () => {
+                resumeModal.classList.remove('active');
+                if (resumeModalOverlay) resumeModalOverlay.classList.remove('active');
+            });
+        }
+        
+        if (resumeModalOverlay) {
+            resumeModalOverlay.addEventListener('click', () => {
+                resumeModal.classList.remove('active');
+                resumeModalOverlay.classList.remove('active');
+            });
+        }
+        
+        // reCAPTCHA
+        let recaptchaWidgetId;
+        function onRecaptchaLoad() {
+            if (document.getElementById('recaptcha-container')) {
+                recaptchaWidgetId = grecaptcha.render('recaptcha-container', {
+                    'sitekey': '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', // Test key, replace with your actual key
+                    'theme': 'light'
+                });
+            }
+        }
+        
+        // Form submission
+        const resumeForm = document.getElementById('resume-form');
+        if (resumeForm) {
+            resumeForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const recaptchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
+                if (!recaptchaResponse) {
+                    alert('Пожалуйста, подтвердите, что вы не робот');
+                    return;
+                }
+                // Here you would send the form data to your server
+                console.log('Form submitted');
+                alert('Резюме отправлено!');
+                resumeModal.classList.remove('active');
+                if (resumeModalOverlay) resumeModalOverlay.classList.remove('active');
+                resumeForm.reset();
+                if (recaptchaWidgetId) grecaptcha.reset(recaptchaWidgetId);
+            });
+        }
+    </script>
+</body>
 </html>

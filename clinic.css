@@ -4,6 +4,7 @@
     margin: 0 auto;
     margin-top: 124px;
     padding: 0;
+    margin-bottom: 40px;
 }
 
 .main-clinic-breadcrumbs {
@@ -29,7 +30,7 @@
 }
 
 .main-clinic-content {
-    padding: 0 40px 40px 40px;
+    padding: 0 48px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -94,6 +95,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    max-width: 662px;
 }
 
 .main-clinic-image {
@@ -127,7 +129,7 @@
     background: #F3FBFF;
     border-radius: 24px;
     padding: 24px;
-    height: 323px;
+    height: 275px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -149,6 +151,7 @@
     font-size: 12px;
     line-height: 18.01px;
     color: #0082B8;
+    width: 192px;
 }
 
 .main-clinic-service-card-image {
@@ -303,12 +306,29 @@
 .main-clinic-cta-block,
 .main-clinic-telegram-block,
 .main-clinic-vacancy-block {
-    background: #F3FBFF;
+    background: linear-gradient(0deg, rgba(243, 251, 255, 0.35) 0%, rgba(243, 251, 255, 0.35) 100%), radial-gradient(2006.18% 243% at 36.71% 50%, rgba(255, 255, 255, 0.87) 0%, rgba(255, 255, 255, 0.00) 100%), linear-gradient(97deg, #EAAEFF 1.34%, #9EDDFF 25.02%, #AFE8FF 52.15%, #9EDDFF 74.35%, #EAAEFF 100%);
     border-radius: 24px;
     padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+        width: 302px;
+}
+.main-clinic-telegram-block{
+    align-items: center;
+    background: url(./images/Frame\ 284.svg);
+    background-size: 100%;
+        height: 212px;
+    justify-content: flex-end;
+}
+.main-clinic-telegram-title{
+    text-align: center;
+    width: 247px;
+}
+
+.main-clinic-telegram-text{
+    text-align: center;
+    width: 207px;
 }
 
 .main-clinic-cta-title,
@@ -347,6 +367,11 @@
     line-height: 100%;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+.main-clinic-telegram-btn{
+    width: 307px;
+    margin-bottom: 4px;
 }
 
 .main-clinic-vacancy-btn {

@@ -50,8 +50,8 @@
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    padding: 32px;
+    align-items: flex-end;
+    background: url(./images/vacancy.svg);
 }
 
 .main-vacancies-banner-content {
@@ -61,22 +61,8 @@
     position: relative;
     z-index: 2;
     max-width: 560px;
-}
-
-.main-vacancies-banner-title {
-    font-family: "Montserrat-SemiBold";
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 140%;
-    color: #232323;
-}
-
-.main-vacancies-banner-text {
-    font-family: "Montserrat-Regular";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    color: #232323;
+    margin-left: 32px;
+    margin-bottom: 29px;
 }
 
 .main-vacancies-banner-button {
@@ -84,13 +70,15 @@
     border: none;
     border-radius: 27px;
     padding: 12px;
-    font-family: "Montserrat-SemiBold";
-    font-weight: 600;
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
     font-size: 20px;
     line-height: 100%;
     color: #FFFFFF;
     cursor: pointer;
     align-self: flex-start;
+    height: 54px;
+    width: 249px;
 }
 
 .main-vacancies-filters {

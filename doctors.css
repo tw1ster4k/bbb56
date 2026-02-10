@@ -389,7 +389,17 @@
     filter: brightness(0) saturate(100%) invert(24%) sepia(93%) saturate(1162%) hue-rotate(169deg) brightness(95%) contrast(96%);
 }
 
+.main-doctors-doctor-cards{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 @media(max-width: 767px) {
+    .main-doctors-doctor-cards{
+        flex-direction: row;
+    }
     .main-doctors {
         margin-top: 90px;
     }
@@ -453,10 +463,11 @@
     .main-doctors-doctor-card {
         flex-direction: column;
         height: 365px;
-        padding: 12px;
+        padding: 0px;
         border-radius: 24px;
         background: #F3FBFF;
         display: flex;
+        width: 183px;
         gap: 0;
     }
     
@@ -466,6 +477,7 @@
         border-radius: 24px;
         object-fit: cover;
         margin-bottom: 12px;
+        height: 184px;
     }
     
     .main-doctors-doctor-info {
@@ -474,7 +486,7 @@
         flex-direction: column;
         justify-content: space-between;
         min-height: auto;
-        padding: 0;
+        padding: 12px;
     }
     
     .main-doctors-doctor-header {
@@ -495,7 +507,7 @@
         font-family: "Montserrat-SemiBold";
         font-weight: 600;
         font-size: 14px;
-        line-height: 100%;
+        line-height: normal;
         color: #232323;
     }
     
@@ -525,6 +537,7 @@
         font-size: 14px;
         line-height: 100%;
         border-radius: 27px;
+        height: 34px;
     }
     
     .main-doctors-reviews {

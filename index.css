@@ -241,6 +241,7 @@ a{
 .achievements{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
     padding-top: 80px;
@@ -250,8 +251,8 @@ a{
 }
 
 .achievements-card{
-    width: 248px;
-    height: 248px;
+    width: 224px;
+    height: 224px;
     padding: 24px;
     background: #F7FBFF;
     border-radius: 24px;
@@ -284,7 +285,7 @@ a{
     font-size: 16px;
     line-height: 18px;
     color: #8DB7CF;
-    margin-top:115px;
+    margin-top:75px;
 }
 
 .description{
@@ -325,6 +326,7 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .description-card-text{
@@ -475,7 +477,7 @@ a{
     width: 500px;
     height: 54px;
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 20px;
     line-height: 100%;
     color: #0082B8;
@@ -493,8 +495,8 @@ a{
 }
 
 .blog-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -512,7 +514,7 @@ a{
 
 .blog-link{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 14px;
     line-height: 100%;
     text-decoration: underline;
@@ -545,7 +547,7 @@ a{
 
 .blog-card-title{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 16px;
     line-height: 100%;
     color: #232323;
@@ -584,8 +586,8 @@ a{
 }
 
 .news-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -594,7 +596,7 @@ a{
 
 .news-link{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 14px;
     line-height: 100%;
     text-decoration: underline;
@@ -649,7 +651,7 @@ a{
 
 .news-card-title{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 16px;
     line-height: 100%;
     color: #232323;
@@ -680,8 +682,8 @@ a{
 }
 
 .employees-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -690,7 +692,7 @@ a{
 
 .employees-link{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 14px;
     line-height: 100%;
     text-decoration: underline;
@@ -835,8 +837,8 @@ a{
 }
 
 .reviews-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -845,7 +847,7 @@ a{
 
 .reviews-link{
     font-weight: 600;
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat-SemiBold";
     font-size: 14px;
     line-height: 100%;
     text-decoration: underline;
@@ -1008,8 +1010,8 @@ a{
 }
 
 .licenses-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -1075,8 +1077,8 @@ a{
 }
 
 .gallery-title{
-    font-weight: 700;
-    font-family: "Montserrat-Bold";
+    font-weight: 600;
+    font-family: "Montserrat-SemiBold";
     font-size: 40px;
     line-height: 100%;
     text-transform: uppercase;
@@ -1113,19 +1115,43 @@ a{
     padding-right: 40px;
     padding-bottom: 24px;
     padding-left: 40px;
-    background: #F7FBFF;
+    background: #F3FBFF;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.footer-logo{
+    margin-bottom: 40px;
 }
 
 .footer-content{
-    margin-top: 40px;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    gap: 0;
+    align-items: flex-start;
 }
 
 .footer-block{
     display: flex;
     flex-direction: column;
+}
+
+.footer-block:first-child{
+    width: 282px;
+    flex-shrink: 0;
+}
+
+.footer-contacts{
+    width: 364px;
+    flex-shrink: 0;
+}
+
+.footer-reviews-block{
+    width: 450px;
+    flex-shrink: 0;
 }
 
 .footer-block-title{
@@ -1135,26 +1161,234 @@ a{
     line-height: 100%;
     color: #0082B8;
     margin-bottom: 16px;
+    letter-spacing: 0.8px;
+}
+
+.footer-catalog-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-catalog-item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 27px;
+    background-color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-catalog-item-icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-catalog-item span{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Montserrat-SemiBold";
+    color: #0082B8;
+}
+
+.footer-contacts-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.footer-contact-item{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 16px 6px 8px;
+    border-radius: 71px;
+    background-color: #F3FBFF;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.footer-contact-item-icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-contact-item span{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Montserrat-SemiBold";
+    color: #232323;
+}
+
+.footer-social{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.footer-social-item{
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 91px;
+    overflow: hidden;
+}
+
+.footer-social-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-social-item-wa{
+    background-color: #0dc143;
+}
+
+.footer-social-item-tg{
+    background-color: #469cff;
+}
+
+.footer-schedule{
+    margin-top: 50px;
+}
+
+.footer-schedule .footer-block-title{
+    margin-bottom: 16px;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 0;
+    height: 89px;
+    justify-content: center;
+}
+
+.footer-link{
+    display: flex;
+    align-items: center;
+    padding: 6px 16px 6px 8px;
+    border-radius: 71px;
+    background-color: #F3FBFF;
+    text-decoration: underline;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    font-family: "Montserrat-SemiBold";
+    color: #0082B8;
+}
+
+.footer-buttons{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 0;
+}
+
+.footer-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 27px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    font-family: "Montserrat-SemiBold";
+}
+
+.footer-btn-primary{
+    background-color: #0082B8;
+    color: #fff;
+}
+
+.footer-btn-primary:hover{
+    background-color: #00719F;
+}
+
+.footer-btn-primary:active{
+    background-color: #005476;
+}
+
+.footer-btn-secondary{
+    background-color: #DCEFF9;
+    color: #0082B8;
+}
+
+.footer-btn-secondary:hover{
+    background-color: #c5e4f5;
+}
+
+.footer-btn-secondary:active{
+    background-color: #0082B8;
+    color: #fff;
+}
+
+.footer-btn svg{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
 }
 
 .footer-block-point{
     font-weight: 600;
     font-size: 12px;
-    line-height: 100%;
+    line-height: normal;
     font-family: "Montserrat-SemiBold";
-    color: #232323;
+    color: #0082B8;
     height: 32px;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
+.footer .call-btn{
+    width: 204px;
+    justify-content: center;
+    height: 48px;
+    font-size: 16px;
+}
+.footer .online-sing{
+    width: 195px;
+    height: 48px;
+    justify-content: center;
+    font-size: 16px;
+}
 
 .footer-block-description{
     font-weight: 600;
     font-family: "Montserrat-SemiBold";
     font-size: 12px;
-    line-height: 100%;
+    line-height: normal;
     color: #232323;
 }
 
@@ -1164,15 +1398,15 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 8px;
     margin-bottom: 50px;
 }
 
 .footer-reviews-img{
-    width: 221px;
+    flex: 1 0 calc(50% - 4px);
+    min-width: 0;
     height: 70px;
     border-radius: 16px;
-    
 }
 
 .color-blue{
@@ -1214,18 +1448,19 @@ a{
     line-height: 100%;
     color: #8DB7CF;
     text-align: center;
-    height: 44px;
-    margin-bottom: 16px;
+    margin: 0;
+    width: 100%;
 }
 
 .footer-copyright{
     font-weight: 600;
     font-size: 14px;
     line-height: 100%;
-    height: 17px;
     color: #8DB7CF;
     text-align: center;
     font-family: "Montserrat-SemiBold";
+    margin: 0;
+    width: 100%;
 }
 
 .mobile-line{
@@ -1262,7 +1497,6 @@ a{
         background-size: 110%;
         padding-top: 25px;
         padding-bottom: 24px;
-        padding-left: 16px;
         padding-right: 16px;
     }
     .achievements{
@@ -1343,8 +1577,8 @@ a{
         font-size: 20px;
     }
     .services-card{
-        width: 139px;
-        height: 139px;
+        width: 120px;
+        height: 120px;
         padding: 16px;
         border-radius: 24px;
         margin-bottom: 8px;
@@ -1356,6 +1590,7 @@ a{
     }
     .services-card-img{
         height: 139px;
+        margin-top: -45px;
     }
     .loyalty{
         background: url(./images/loyalty-bg-mobli.png);
@@ -1388,8 +1623,8 @@ a{
         padding-bottom: 16px;
     }
     .blog-line{
-        padding-right: 121px;
         margin-bottom: 16px;
+        width: 95%;
     }
     .blog-title{
         font-size: 20px;
@@ -1414,8 +1649,8 @@ a{
         padding-bottom: 16px;
     }
     .employees-line{
-        padding-right: 1px;
         margin-bottom: 16px;
+        width: 100%;
     }
     .employees-title{
         font-size: 20px;
@@ -1545,6 +1780,22 @@ a{
         display: flex;
         flex-direction: column;
     }
+    .kids-card{
+        min-width: 170px;
+        height: 350px;
+    }
+    .licenses-card{
+        min-width: 162px;
+        height: 290px;
+        padding: 12px 0;
+    }
+    .licenses-card-title{
+        font-size: 12px;
+        line-height: 18.01px;
+    }
+    .licenses-card-img{
+        margin: 0;
+    }
 }
 
 .main-news{
@@ -1604,8 +1855,9 @@ a{
     height: 354px;
     width: 536px;
     border-radius: 24px;
-    position: fixed;
+    position: sticky;
     right: 40px;
+    align-self: flex-start;
 }
 .main-news-content-block-telegram-link{
     border-radius: 27px;
@@ -2661,8 +2913,8 @@ li a{
 }
 .modal-input-key.required::after{
     content: "*";
-    margin-left: 8px;
-    color: red;
+    margin-left: 6px;
+    color: #ff3644;
 }
 .modal-input{
     height: 24px;
@@ -2716,6 +2968,253 @@ li a{
     position: absolute;
     right: 20px;
     top: 20px;
+    cursor: pointer;
+}
+
+/* Modal Resume Styles */
+.modal-resume-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+.modal-resume-overlay.active{
+    display: block;
+}
+
+.modal-resume{
+    width: auto;
+    max-width: 500px;
+    min-width: 436px;
+    border-radius: 24px;
+    padding: 24px;
+    background: #fff;
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    gap: 24px;
+}
+.modal-resume.active{
+    display: flex;
+}
+
+.modal-resume-input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.modal-resume-label{
+    display: flex;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+    font-family: "Montserrat-SemiBold";
+}
+
+.modal-resume-label-required{
+    color: #ff3644;
+}
+
+.modal-resume-input-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-resume-input-icon{
+    position: absolute;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.modal-resume-input,
+.modal-resume-select,
+.modal-resume-textarea{
+    width: 100%;
+    height: 48px;
+    border-radius: 27px;
+    border: 2px solid #DCEFF9;
+    background-color: #fff;
+    color: #232323;
+    padding: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    font-family: "Montserrat-Medium";
+    box-sizing: border-box;
+}
+
+.modal-resume-input-wrapper .modal-resume-input-icon + .modal-resume-input,
+.modal-resume-input-wrapper:has(.modal-resume-input-icon) .modal-resume-input{
+    padding-left: 48px;
+}
+
+.modal-resume-input::placeholder,
+.modal-resume-textarea::placeholder{
+    color: #8DB7CF;
+}
+
+.modal-resume-select{
+    appearance: none;
+    background-image: url('./images/icon/caret-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 48px;
+    cursor: pointer;
+}
+
+.modal-resume-textarea{
+    height: auto;
+    min-height: 48px;
+    resize: vertical;
+    padding-left: 12px;
+}
+
+.modal-resume-file-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.modal-resume-file-wrapper{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.modal-resume-file-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 27px;
+    background-color: #DCEFF9;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #0082B8;
+    font-family: "Montserrat-SemiBold";
+    white-space: nowrap;
+}
+
+.modal-resume-file-btn:hover{
+    background-color: #c5e4f5;
+}
+
+.modal-resume-file-info{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #b8b8b8;
+    font-family: "Montserrat-SemiBold";
+}
+
+.modal-resume-file-input{
+    display: none;
+}
+
+.modal-resume-recaptcha-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-resume-recaptcha-label{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18.01px;
+    color: #333;
+    font-family: "Montserrat-Regular";
+}
+
+.modal-resume-recaptcha{
+    width: 275px;
+    height: 71px;
+}
+
+.modal-resume-checkbox-wrapper{
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.modal-resume-checkbox{
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 1px solid #DCEFF9;
+    margin-top: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.modal-resume-checkbox-label{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18.01px;
+    color: #14181e;
+    font-family: "Montserrat-Medium";
+}
+
+.modal-resume-checkbox-label a{
+    color: #0082B8;
+    text-decoration: none;
+}
+
+.modal-resume-submit-btn{
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 27px;
+    background-color: #0082B8;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    font-family: "Montserrat-SemiBold";
+    cursor: pointer;
+}
+
+.modal-resume-submit-btn:hover{
+    background-color: #00719F;
+}
+
+.modal-resume-submit-btn:active{
+    background-color: #005476;
+}
+
+.modal-resume-close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .description-dots{

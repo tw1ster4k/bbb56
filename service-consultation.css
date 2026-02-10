@@ -154,10 +154,10 @@
 }
 
 .main-service-detail-article-image {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
+    height: 280px;
+    border-radius: 24px;
     object-fit: cover;
+    align-self: stretch;
 }
 
 .main-service-detail-article-subtitle {
@@ -333,31 +333,17 @@
 .main-service-detail-cta {
     position: sticky;
     top: 140px;
-    width: 260px;
-    background: #F3FBFF;
+    width: 350px;
+    height: 374px;
     border-radius: 24px;
-    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     flex-shrink: 0;
     align-self: flex-start;
-}
-
-.main-service-detail-cta-title {
-    font-family: "Montserrat-SemiBold";
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 100%;
-    color: #232323;
-}
-
-.main-service-detail-cta-text {
-    font-family: "Montserrat-Regular";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    color: #232323;
+    background: url(./images/Frame\ 189.svg);
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .main-service-detail-cta-btn {
@@ -375,6 +361,10 @@
     color: #FFFFFF;
     cursor: pointer;
     transition: background-color 0.2s;
+    width: 196px;
+    height: 54px;
+    margin-left: 33px;
+    margin-bottom: 44px;
 }
 
 .main-service-detail-cta-btn:hover {
