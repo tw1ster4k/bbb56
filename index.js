@@ -1,6 +1,7 @@
 const navbarBtn = document.querySelector(".mobile-line-menu");
 const navbarMobil = document.querySelector(".mobile-line");
 
+if (navbarBtn && navbarMobil) {
 navbarBtn.addEventListener("click", function(e) {
     if(navbarBtn.classList.contains('active')){
         navbarBtn.classList.remove('active')
@@ -36,7 +37,8 @@ navbarBtn.addEventListener("click", function(e) {
                 </div>
                 `
     }
-}) 
+})
+}
 
 
 
@@ -45,7 +47,7 @@ const images = document.querySelectorAll('.carousel-content-img');
 const dotsContainer = document.querySelector('.carousel-dots');
 let currentIndex = 0;
 
-
+if (slides && images.length > 0 && dotsContainer) {
 images.forEach((_, i) => {
     const dot = document.createElement('span');
     dot.classList.add("carousel-dots-dot");
@@ -75,12 +77,15 @@ function updateSlider() {
     if(currentIndex >= images.length) currentIndex = 0;
     updateSlider();
  },5000);
+}
 
 
 
  document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.description-content');
     const dots = document.querySelectorAll('.description-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
     // Изначально активна первая точка
     let currentIndex = 0;
@@ -165,6 +170,8 @@ function updateSlider() {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.blog-content');
     const dots = document.querySelectorAll('.blog-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -248,6 +255,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.news-content');
     const dots = document.querySelectorAll('.news-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -333,6 +342,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.employees-content');
     const dots = document.querySelectorAll('.employees-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -419,6 +430,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.kids-content');
     const dots = document.querySelectorAll('.kids-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -503,6 +516,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.reviews-content');
     const dots = document.querySelectorAll('.reviews-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -587,6 +602,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.licenses-content');
     const dots = document.querySelectorAll('.licenses-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -671,6 +688,8 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const ele = document.querySelector('.gallery-content');
     const dots = document.querySelectorAll('.gallery-dots-dot');
+    
+    if (!ele || dots.length === 0) return;
 
    // Изначально активна первая точка
    let currentIndex = 0;
@@ -755,16 +774,24 @@ const callBtn = document.querySelector(".call-btn")
 const modal = document.querySelector(".modal")
 const modalClose = document.querySelector('.modal-close')
 
+if (callBtn && modal && modalClose) {
 callBtn.addEventListener("click", function() {
     modal.classList.add("active")
-    document.querySelector('header').style.filter = "blur(4px)"
-    document.querySelector('footer').style.filter = "blur(4px)"
-    document.querySelector('.main').style.filter = "blur(4px)"
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('.main');
+    if (header) header.style.filter = "blur(4px)";
+    if (footer) footer.style.filter = "blur(4px)";
+    if (main) main.style.filter = "blur(4px)";
 })
 
 modalClose.addEventListener("click", function() {
     modal.classList.remove("active")
-    document.querySelector('header').style.filter = "blur(0px)"
-    document.querySelector('footer').style.filter = "blur(0px)"
-    document.querySelector('.main').style.filter = "blur(0px)"
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('.main');
+    if (header) header.style.filter = "blur(0px)";
+    if (footer) footer.style.filter = "blur(0px)";
+    if (main) main.style.filter = "blur(0px)";
 })
+}

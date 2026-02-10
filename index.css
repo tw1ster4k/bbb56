@@ -1451,6 +1451,12 @@ a{
     margin: 0;
     width: 100%;
 }
+.footer-logo-after{
+    display: none;
+}
+.footer-logo-after-web{
+    display: flex;
+}
 
 .footer-copyright{
     font-weight: 600;
@@ -1491,6 +1497,8 @@ a{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .carousel{
         width: 100%;
@@ -1738,6 +1746,7 @@ a{
         padding-right: 16px;
         padding-top: 16px;
         padding-bottom: 24px;
+        width: auto;
     }
     .footer-content{
         flex-direction: column;
@@ -1796,8 +1805,28 @@ a{
     .licenses-card-img{
         margin: 0;
     }
+    .footer-logo{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+    .footer-logo-after{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 32px;
+    }
+    .footer-logo-after-web{
+        display: none;
+    }
+    .footer-logo-after .call-btn{
+        font-size: 14px;
+        height: 34px;
+    }
+        .footer-logo-after .online-sing{
+        font-size: 14px;
+        height: 34px;
+    }
 }
-
 .main-news{
     padding: 40px;
     max-width: 1440px;
