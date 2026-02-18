@@ -26,7 +26,10 @@
 .main-price-page-breadcrumbs-item {
     color: #B8B8B8;
 }
-
+.main-price-page-breadcrumbs-item a{
+    color: #B8B8B8;
+    text-decoration: none;
+}
 .main-price-page-breadcrumbs-separator {
     color: #B8B8B8;
 }

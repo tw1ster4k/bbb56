@@ -21,6 +21,11 @@
     color: #B8B8B8;
 }
 
+.main-clinic-breadcrumbs-item a{
+    color: #B8B8B8;
+    text-decoration: none;
+}
+
 .main-clinic-breadcrumbs-separator {
     color: #B8B8B8;
 }
