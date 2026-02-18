@@ -1926,7 +1926,7 @@ a{
     width: 536px;
     border-radius: 24px;
     position: sticky;
-    right: 40px;
+    right: 0px;
     align-self: flex-start;
 }
 .main-news-content-block-telegram-link{
