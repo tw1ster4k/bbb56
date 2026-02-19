@@ -26,6 +26,11 @@
     color: #B8B8B8;
 }
 
+.main-service-detail-breadcrumbs-item a{
+    color: #B8B8B8;
+    text-decoration: none;
+}
+
 .main-service-detail-breadcrumbs-item-active {
     color: #0082B8;
 }

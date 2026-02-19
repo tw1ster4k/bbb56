@@ -91,6 +91,15 @@
         </div>
     </header>
     <div class="main-faq">
+                <div class="main-contacts-detail-breadcrumbs">
+            <span class="main-contacts-detail-breadcrumbs-item">
+            <a href="./index.html">
+                Главная
+            </a>
+            </span>
+            <span class="main-contacts-detail-breadcrumbs-separator">/</span>
+            <span class="main-contacts-detail-breadcrumbs-item main-contacts-detail-breadcrumbs-item-active">FAQ</span>
+        </div>
         <h1 class="main-faq-title">FAQ</h1>
         <div class="main-faq-content">
             <div class="main-faq-content-block">
@@ -260,6 +269,72 @@ faqContentBlock.addEventListener("click", function(e) {
     }
 })
     </script>
+    <div class="modal">
+        <div class="modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 612.043 612.043" style="enable-background:new 0 0 612.043 612.043;" xml:space="preserve">
+                <g>
+                    <g id="cross">
+                        <g>
+                            <path d="M397.503,306.011l195.577-195.577c25.27-25.269,25.27-66.213,0-91.482c-25.269-25.269-66.213-25.269-91.481,0     L306.022,214.551L110.445,18.974c-25.269-25.269-66.213-25.269-91.482,0s-25.269,66.213,0,91.482L214.54,306.033L18.963,501.61     c-25.269,25.269-25.269,66.213,0,91.481c25.269,25.27,66.213,25.27,91.482,0l195.577-195.576l195.577,195.576     c25.269,25.27,66.213,25.27,91.481,0c25.27-25.269,25.27-66.213,0-91.481L397.503,306.011z"></path>
+                        </g>
+                    </g>
+                </g>
+                </svg>
+        </div>
+        <h2 class="modal-title">Заказать звонок</h2>
+        <p class="modal-description">Оставьте ваши контактные данные, и наш специалист свяжется с вами в ближайшее время!</p>
+        <p class="modal-input-key required">Ваше имя</p>
+        <input required class="modal-input" placeholder="Введите ваше имя" />
+        <p class="modal-input-key required">Телефон</p>
+        <input required id="phone" type="tel" class="modal-input" placeholder="+7 (XXX) XXX XX XX" />
+        <script>
+            const input = document.getElementById('phone');
+          
+            input.addEventListener('input', () => {
+              let value = input.value.replace(/\D/g, ''); // Удаляем все нецифровые символы
+              const maxLength = 11; // например, для российского номера +7 и 10 цифр
+          
+              if (value.length > maxLength) {
+                value = value.slice(0, maxLength);
+              }
+          
+              // Форматируем номер
+              let formatted = '+7 ';
+              if (value.length > 1) {
+                formatted += '(' + value.slice(1, 4);
+              }
+              if (value.length >= 4) {
+                formatted += ') ' + value.slice(4, 7);
+              }
+              if (value.length >= 7) {
+                formatted += '-' + value.slice(7, 9);
+              }
+              if (value.length >= 9) {
+                formatted += '-' + value.slice(9, 11);
+              }
+          
+              input.value = formatted;
+            });
+          </script>
+          <script>
+            const width = window.innerWidth;
+            const carouselImgs = document.querySelectorAll('.carousel-content-img');
+            console.log(carouselImgs)
+            if(width < 767){
+               carouselImgs.forEach(element => {
+                element.src = './images/carousel-mobile.png'
+               });
+            
+            }
+          </script>
+        <p class="modal-input-key">Дополнительная информация</p>
+        <textarea class="modal-input textarea" placeholder="Хотите что-то добавить?" ></textarea>
+        <label class="modal-label">
+            <input type="checkbox" required class="modal-checkbox" />
+            Я согласен на <a href="/policy">обработку персональных данных</a>
+        </label>
+        <button class="modal-btn">Отправить</button>
+    </div>
     <script src="./index.js" ></script>
 </body>
 </html>

@@ -2110,6 +2110,28 @@ a{
     display: flex;
     flex-direction: column;
 }
+.main-contacts-detail-breadcrumbs{
+      display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Montserrat-SemiBold";
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 100%;
+}
+.main-contacts-detail-breadcrumbs-separator{
+    color: #B8B8B8;
+}
+.main-contacts-detail-breadcrumbs-item{
+    color: #B8B8B8;
+}
+.main-contacts-detail-breadcrumbs-item a{
+    color: #B8B8B8;
+    text-decoration: none;
+}
+.main-contacts-detail-breadcrumbs-item-active{
+    color: #0082B8;
+}
 .main-contacts-content-block-contacts{
     padding: 18px;
     width: 100%;
@@ -2217,6 +2239,9 @@ a{
 @media(max-width:767px){
     .main-contacts{
         padding: 0;
+    }
+    .main-contacts-detail-breadcrumbs{
+        display: none;
     }
     .main-contacts-title{
         font-size: 20px;
