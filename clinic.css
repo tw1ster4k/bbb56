@@ -231,7 +231,7 @@
 .main-clinic-staff-photo {
     width: 180px;
     height: 180px;
-    border-radius: 24px 24px 0 0;
+    border-radius: 24px;
     overflow: hidden;
 }
 
@@ -549,7 +549,9 @@
         text-transform: uppercase;
         color: #0082B8;
         padding: 0 16px;
-        margin-bottom: 0;
+        margin-bottom: 16px;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
     }
     
     .main-clinic-layout {
@@ -565,17 +567,18 @@
     .main-clinic-article {
         padding: 0;
         gap: 24px;
+        max-width: 375px;
     }
     
     .main-clinic-image {
         height: 189px;
         border-radius: 16px;
-        margin: 0 16px;
+        margin: 0;
     }
     
     .main-clinic-services-title {
         font-size: 16px;
-        line-height: 100%;
+        line-height: normal;
         color: #232323;
         padding: 0 16px;
         margin-bottom: 0;
@@ -584,7 +587,7 @@
     .main-clinic-services-grid {
         grid-template-columns: 1fr;
         gap: 24px;
-        padding: 0 16px;
+        padding: 0;
     }
     
     .main-clinic-service-card {
@@ -594,7 +597,7 @@
     
     .main-clinic-service-card-title {
         font-size: 20px;
-        line-height: 100%;
+        line-height: normal;
     }
     
     .main-clinic-service-card-text {
@@ -621,12 +624,14 @@
     }
     
     .main-clinic-staff {
-        padding: 0 16px;
+        padding: 0;
+        margin-bottom: 24px;
     }
     
     .main-clinic-staff-title {
         font-size: 20px;
         line-height: 100%;
+        margin-left: 16px;
         margin-bottom: 16px;
     }
     
@@ -672,17 +677,28 @@
     }
     
     .main-clinic-reviews {
-        padding: 0 16px;
+        padding:16px;
+        margin-top: 24px;
     }
-    
+    .main-clinic-reviews-header{
+        height: 52px;
+        align-items: flex-end;
+    }
     .main-clinic-reviews-title {
+        font-weight: 600;
+        font-family: "Montserrat-SemiBold";
         font-size: 20px;
         line-height: 140%;
         text-transform: uppercase;
         color: #0082B8;
-        margin-bottom: 16px;
+        margin-bottom: 0px;
+        width: 207px;
+        height: 52px;
     }
-    
+    .main-clinic-reviews-grid{
+        flex-direction: column;
+        padding: 0;
+    }
     .main-clinic-reviews-content {
         flex-direction: column;
         gap: 16px;
@@ -690,11 +706,35 @@
     
     .main-clinic-review-card {
         padding: 16px;
+        max-width: 311px;
+        min-width: auto;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 16px;
     }
-    
+    .main-clinic-review-header{
+        display: none;
+    }
+    .main-clinic-review-header.mobile{
+        display: flex;
+        justify-content: center;
+        height: 69px;
+    }
+    .main-clinic-reviews-pagination{
+        display: none;
+    }
     .main-clinic-review-text {
         font-size: 12px;
         line-height: 18.01px;
         height: 92px;
         -webkit-line-clamp: 5;
+        margin-bottom: 16px;
     }
+    .main-clinic-service-card-image img{
+        height: 273px;
+    }
+    .main-clinic-staff-photo{
+        width: 190px;
+        height: 190px;
+    }
+}

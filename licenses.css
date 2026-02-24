@@ -229,7 +229,9 @@
     object-fit: contain;
     border-radius: 8px;
 }
-
+.main-clinic-review-header.mobile{
+    display: none;
+}
 .license-image-modal-close {
     position: absolute;
     top: -40px;
@@ -319,7 +321,9 @@
         max-width: 95%;
         max-height: 95%;
     }
-    
+    .main-clinic-reviews-pagination{
+        display: none;
+    }
     .license-image-modal-close {
         top: -50px;
         right: -10px;
@@ -327,10 +331,24 @@
     
     .main-clinic-reviews-grid {
         padding: 0;
+        flex-direction: column;
     }
     
     .main-clinic-review-card {
-        width: 100%;
-        min-width: 100%;
+        padding: 16px;
+        max-width:311px;
+        min-width: auto;
+        display: flex;
+       flex-wrap: wrap;
+       gap: 16px;
+       height: auto;
+    }
+    .main-clinic-review-header.mobile{
+        justify-content: center;
+        display: flex;
+        height: 69px;
+    }
+    .main-clinic-review-header{
+        display: none;
     }
 }

@@ -153,7 +153,7 @@
     }
 
     .main-vacancy-detail-section {
-        padding: 16px;
+        padding: 0px;
         gap: 24px;
     }
 
@@ -190,10 +190,12 @@
     }
 
     .main-vacancy-detail-cta {
-        height: auto;
-        min-height: 354px;
-        padding: 24px;
+        padding: 0;
         gap: 24px;
+        background: url(images/vacancy-details-mobile.svg);
+        height: 294px;
+        background-repeat: no-repeat;
+        
     }
 
     .main-vacancy-detail-cta-title {
@@ -208,8 +210,12 @@
 
     .main-vacancy-detail-cta-button {
         padding: 12px;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 100%;
+        width: 214px;
+        height: 48px;
+        margin-bottom: 44px;
+        margin-left: 14px;
     }
     .main-vacancy-detail-sidebar{
         padding: 0;

@@ -130,7 +130,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     max-width: 800px;
 }
 
@@ -151,11 +151,11 @@
 }
 
 .main-service-detail-article-text p {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .main-service-detail-article-text p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 8px;
 }
 
 .main-service-detail-article-image {
@@ -242,17 +242,17 @@
 .main-service-detail-staff-card {
     background: #F3FBFF;
     border-radius: 24px;
-    padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 180px;
+    width: 190px;
     flex-shrink: 0;
+    justify-content: space-between;
 }
 
 .main-service-detail-staff-photo {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 8px;
     object-fit: cover;
     margin-bottom: 12px;
@@ -282,14 +282,14 @@
     background: #DCEFF9;
     border: none;
     border-radius: 27px;
-    padding: 8px 16px;
+    padding: 8px;
     font-family: "Montserrat-SemiBold";
     font-weight: 600;
     font-size: 14px;
     line-height: 100%;
     color: #0082B8;
     cursor: pointer;
-    width: 100%;
+    margin-bottom: 12px;
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -380,6 +380,10 @@
     background: #005476;
 }
 
+.main-service-detail-cta.mobile{
+    display: none;
+}
+
 /* Mobile Styles */
 @media(max-width: 767px) {
     .main-service-detail {
@@ -399,12 +403,15 @@
         line-height: 140%;
         padding: 0 16px;
         margin-bottom: 16px;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
     }
     
     .main-service-detail-layout {
         flex-direction: column;
         gap: 16px;
         padding: 0;
+        max-width: 375px;
     }
     
     .main-service-detail-sidebar {
@@ -415,19 +422,20 @@
         flex-direction: column;
         gap: 16px;
         padding: 0;
+        max-width: 375px;
     }
     
     .main-service-detail-article {
         padding: 0 16px;
         gap: 16px;
-        max-width: 100%;
+        max-width: 343px;
     }
     
     .main-service-detail-article-title {
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0.8px;
-        color: #0082B8;
+        color: #232323;
     }
     
     .main-service-detail-article-text {
@@ -439,7 +447,7 @@
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0.8px;
-        color: #0082B8;
+        color: #232323;
     }
     
     .main-service-detail-article-list {
@@ -462,12 +470,15 @@
     }
     
     .main-service-detail-staff-card {
-        min-width: 167px;
+        width: 190px;
+        height: 350px;
     }
-    
+    .main-service-detail-staff-name{
+        text-align: center;
+    }
     .main-service-detail-staff-photo {
-        width: 120px;
-        height: 120px;
+        width: 190px;
+        height: 190px;
     }
     
     .main-service-detail-services-list {
@@ -481,10 +492,22 @@
     .main-service-detail-cta {
         position: relative;
         top: 0;
-        width: 100%;
-        margin: 0 16px;
+        width: 375px;
+        margin: 0;
+        background: url(images/service-consultation-mobile.svg);
+        height: 245px;
+        display: none;
     }
-    
+    .main-service-detail-cta.mobile{
+        display: flex;
+        margin-bottom: 16px;
+    }
+    .main-service-detail-cta-btn{
+        width: 214px;
+        height: 48px;
+        margin-left: 14px;
+        margin-bottom: 55px;
+    }
     .main-service-detail-cta-title {
         font-size: 16px;
     }

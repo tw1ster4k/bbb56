@@ -863,6 +863,7 @@ a{
     overflow-x: auto;
 }
 
+
 .reviews-card{
     min-width: 960px;
     padding: 16px;
@@ -880,7 +881,10 @@ a{
     border-radius: 149px;
     margin-right: 24px;
 }
-
+.reviews-card-first-line{
+    display: flex;
+    align-items: flex-start;
+}
 .reviews-card-text{
     display: flex;
     flex-direction: column;
@@ -907,6 +911,12 @@ a{
     width: 100%;
 }
 
+.reviews-card-name.mobile{
+    display: none;
+}
+.reviews-card-date.mobile{
+    display: none;
+}
 .reviews-card-message{
     font-family: "Montserrat-Regular";
     font-weight: 400;
@@ -940,7 +950,13 @@ a{
     background: #0082B8;
     color: #FFFFFF;
 }
-
+.reviews-dots{
+    width: 85%;
+    display: flex;
+    height: 8px;
+    justify-content: center;
+    margin-top: 16px;
+}
 .now{
     background: url(./images/now-bg.svg);
     display: flex;
@@ -1688,9 +1704,50 @@ a{
         margin-bottom: 16px;
         align-items: flex-end;
     }
+    .reviews-content{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .reviews-card{
+        max-width: 375px;
+        min-width: auto;
+        flex-direction: column;
+    }
+    .reviews-card-name{
+        display: none;
+    }
+    .reviews-card-date{
+        display: none;
+    }
+    .reviews-card-date.mobile{
+        display: block;
+    }
+    .reviews-card-name.mobile{
+        display: block;
+    }
+    .reviews-card-first-line{
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .reviews-card-message{
+          display: -webkit-box;
+  -webkit-line-clamp: 5; /* Количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Скрывает текст, выходящий за пределы */
+  text-overflow: ellipsis; /* Добавляет многоточие */
+    }
+    .reviews-dots{
+        display: none;
+    }
     .reviews-title{
         font-size: 20px;
         width: 207px;
+    }
+    .reviews-card-btn{
+        padding: 8px;
+        width: 162px;
+        height: 34px;
+        font-size: 14px;
     }
     .now{
         background-image: url(./images/nowBgMobil.png);
@@ -3115,7 +3172,6 @@ li a{
     flex-direction: column;
     gap: 6px;
     width: 100%;
-    margin-bottom: 24px;
 }
 
 .modal-resume-label{
@@ -3184,8 +3240,13 @@ li a{
     background-position: right 12px center;
     padding-right: 48px;
     cursor: pointer;
+    color: #8DB7CF;
 }
-
+#resume-form{
+    gap:24px;
+    display: flex;
+    flex-direction: column;
+}
 .modal-resume-textarea{
     height: auto;
     min-height: 48px;
@@ -3425,14 +3486,6 @@ li a{
     background-color: #0082B8;
 }
 
-
-.reviews-dots{
-    width: 85%;
-    display: flex;
-    height: 8px;
-    justify-content: center;
-    margin-top: 16px;
-}
 .reviews-dots-dot{
     height: 8px;
     width: 8px;
@@ -3502,9 +3555,6 @@ li a{
         width: 100%;
     }
     .kids-dots{
-        width: 100%;
-    }
-    .reviews-dots{
         width: 100%;
     }
     .licenses-dots{
@@ -3755,6 +3805,7 @@ ol li{
     margin: 0 auto;
     margin-top: 125px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 @media(max-width:767px){
@@ -5329,4 +5380,482 @@ ol li{
     background: #DCEFF9;
     border-radius: 27px;
     margin-right: 8px;
+}
+
+/* Адаптивная версия для doctor.html */
+@media(max-width: 767px) {
+    /* Скрываем desktop элементы */
+    .page .main-contacts-detail-breadcrumbs {
+        display: none;
+    }
+    
+    .page .sidebar {
+        display: none;
+    }
+    
+    .page > div[style*="display: flex"] {
+        flex-direction: column;
+    }
+    
+    /* Основной контейнер страницы */
+    .page {
+        padding: 0;
+        margin-top: 0;
+        gap: 0;
+        max-width: 100%;
+    }
+    
+    /* Заголовок врача (мобильный) */
+    .page .sidebar-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #0082B8;
+        text-transform: uppercase;
+        padding: 16px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Контент */
+    .page .content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    /* Карточка врача */
+    .doctor-card {
+        background: #F3FBFF;
+        border-radius: 24px;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 16px;
+        box-sizing: border-box;
+    }
+    
+    .doctor-photo {
+        width: 100%;
+        height: 304px;
+        border-radius: 8px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .doctor-info {
+        padding: 0 16px 16px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .doctor-info > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .doctor-info-name {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #232323;
+        margin: 0;
+    }
+    
+    .doctor-position {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #0082B8;
+        margin: 0;
+    }
+    
+    .exp {
+        font-family: "Montserrat-Medium";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18.01px;
+        color: #0082B8;
+        margin: 0;
+    }
+    
+    .exp strong {
+        color: #333333;
+        font-weight: 500;
+    }
+    
+    .address {
+        font-family: "Montserrat-Medium";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18.01px;
+        color: #0082B8;
+        margin: 0;
+    }
+    
+    .address strong {
+        color: #333333;
+        font-weight: 500;
+    }
+    
+    .address a {
+        color: #0082B8;
+        text-decoration: underline;
+    }
+    
+    .video-btn {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        background: #DCEFF9;
+        border: none;
+        border-radius: 27px;
+        color: #0082B8;
+        cursor: pointer;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Секция "О враче" */
+    .about {
+        margin: 0;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .about h3 {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #232323;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    .about h4 {
+        font-family: "Montserrat-Bold";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+    }
+    
+    .about h4 + ul {
+        margin-bottom: 16px;
+    }
+    
+    .about ul {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0;
+        padding-left: 21px;
+    }
+    
+    .about ul li {
+        margin-bottom: 16px;
+    }
+    
+    .about ul li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .about p {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+    }
+    
+    /* Документы (сертификаты) */
+    .docs {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+    }
+    
+    .doc-block {
+        flex: 1;
+        height: 220px;
+        border-radius: 24px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    /* Блок "Записаться онлайн" */
+    .page .zapisatya-doctor {
+        width: 100%;
+        height: 245px;
+        border-radius: 24px;
+        margin: 16px;
+        box-sizing: border-box;
+        background: linear-gradient(100.26deg, rgba(234, 174, 255, 1) 1.34%, rgba(158, 221, 255, 1) 25.02%, rgba(175, 232, 255, 1) 52.15%, rgba(158, 221, 255, 1) 74.35%, rgba(234, 174, 255, 1) 100%);
+        background-image: url(./images/zapisatya-doctor.svg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        display: block;
+    }
+    
+    .page .main-contacts-content-block-online-link.doctor {
+        margin: 0;
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        height: auto;
+        padding: 12px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .page .main-contacts-content-block-online-link.doctor svg {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+}
+
+/* Адаптивная версия для novost.html */
+@media(max-width: 767px) {
+    /* Скрываем desktop элементы */
+    .page-novost .main-contacts-detail-breadcrumbs {
+        display: none;
+    }
+    
+    /* Основной контейнер страницы */
+    .page-novost {
+        max-width: 100%;
+        padding: 0;
+        margin-top: 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .page-novost > div[style*="max-width: 60%"] {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    /* Заголовок новости */
+    .page-novost .sidebar-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #0082B8;
+        text-transform: uppercase;
+        padding: 16px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Карточка новости */
+    .novost-card {
+        background: #F3FBFF;
+        padding: 16px;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        margin: 0 16px;
+        box-sizing: border-box;
+    }
+    
+    .novost-card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .novost-card-info-title {
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: #232323;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    .exp-novost {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #333;
+        margin: 0;
+    }
+    
+    .novost-card-date {
+        padding: 6px;
+        border-radius: 16px;
+        background: #DCEFF9;
+        font-family: "Montserrat-Medium";
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        color: #0082B8;
+        width: auto;
+        display: inline-block;
+        text-align: left;
+        margin: 0;
+    }
+    
+    /* Секция "О новости" */
+    .page-novost .about {
+        margin: 0;
+        width: 100%;
+        padding: 16px;
+        box-sizing: border-box;
+        border-radius: 24px;
+    }
+    
+    .page-novost .about p {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+    }
+    
+    .page-novost .about ul {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+        padding-left: 21px;
+    }
+    
+    .page-novost .about ul li {
+        margin-bottom: 16px;
+    }
+    
+    .page-novost .about ul li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .page-novost .about ol {
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+        padding-left: 21px;
+    }
+    
+    .page-novost .about ol li {
+        margin-bottom: 16px;
+    }
+    
+    .page-novost .about ol li:last-child {
+        margin-bottom: 0;
+    }
+    
+    .page-novost .about h4 {
+        font-family: "Montserrat-Bold";
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #232323;
+        margin: 0 0 16px 0;
+    }
+    
+    .page-novost .about a {
+        color: #0082B8;
+        text-decoration: underline;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+    }
+    
+    /* Блок "Записаться онлайн" */
+    .novost-zapis {
+        width: calc(100% - 32px);
+        height: 258px;
+        border-radius: 24px;
+        margin: 16px;
+        box-sizing: border-box;
+        background: linear-gradient(99.75662483833045deg, rgb(234, 174, 255) 1.342%, rgb(158, 221, 255) 25.02%, rgb(175, 232, 255) 52.151%, rgb(158, 221, 255) 74.349%, rgb(234, 174, 255) 100%);
+        background-image: url(./images/novost-zapis.svg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-contacts-content-block-online-link.novost {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        padding: 12px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #0082B8;
+        color: white;
+        border-radius: 27px;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+    }
+    
+    .main-contacts-content-block-online-link.novost svg {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+}
+
+/* Резюме мобильная версия */
+@media(max-width:767px){
+    .modal-resume{
+        max-width: 343px;
+        min-width: auto;
+        width: 100%;
+        padding: 16px;
+    }
+    .modal-resume-close{
+        right: 10px;
+        top: 10px;
+    }
 }
