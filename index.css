@@ -1491,6 +1491,67 @@ a{
     display: none;
 }
 
+/* Мобильный поиск */
+.mobile-search-block {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 8px 16px;
+    width: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.mobile-search-close,
+.mobile-search-submit {
+    background: #DCEFF9;
+    border: none;
+    border-radius: 27px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.mobile-search-close svg,
+.mobile-search-submit svg {
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-search-input {
+    width: 211px;
+    height: 20px;
+    padding: 12px;
+    border: 2px solid #DCEFF9;
+    border-radius: 27px;
+    background: white;
+    font-family: "Montserrat-Medium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #232323;
+    outline: none;
+}
+
+.mobile-search-input::placeholder {
+    color: #8DB7CF;
+}
+
+.mobile-search-input:focus {
+    border-color: #0082B8;
+}
+
 @media(max-width: 767px){
     .navbar{
         width: 100%;

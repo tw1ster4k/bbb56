@@ -123,7 +123,104 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Мобильный поиск
+document.addEventListener('DOMContentLoaded', function () {
+    const searchBtn = document.querySelector(".mobile-line-search");
+    const mobileLine = document.querySelector(".mobile-line");
 
+    if (!searchBtn || !mobileLine) return;
+
+    const searchSvg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M27.8453 29.3663C26.5006 30.3913 24.8214 31 23 31C18.5817 31 15 27.4183 15 23C15 18.5817 18.5817 15 23 15C27.4183 15 31 18.5817 31 23C31 25.0713 30.2128 26.9587 28.9214 28.3794C28.9479 28.3975 28.9736 28.4175 28.9983 28.4394L33.4983 32.4394C33.8079 32.7146 33.8357 33.1887 33.5606 33.4983C33.2854 33.8079 32.8113 33.8357 32.5017 33.5606L28.0017 29.5606C27.9373 29.5033 27.8851 29.4375 27.8453 29.3663ZM29.5 23C29.5 26.5899 26.5899 29.5 23 29.5C19.4101 29.5 16.5 26.5899 16.5 23C16.5 19.4101 19.4101 16.5 23 16.5C26.5899 16.5 29.5 19.4101 29.5 23Z" fill="#0082B8"/>
+        </svg>
+    `;
+
+    const closeSvg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
+            <path d="M18.5303 17.4697C18.2374 17.1768 17.7626 17.1768 17.4697 17.4697C17.1768 17.7626 17.1768 18.2374 17.4697 18.5303L22.9393 24L17.4697 29.4697C17.1768 29.7626 17.1768 30.2374 17.4697 30.5303C17.7626 30.8232 18.2374 30.8232 18.5303 30.5303L24 25.0607L29.4697 30.5303C29.7626 30.8232 30.2374 30.8232 30.5303 30.5303C30.8232 30.2374 30.8232 29.7626 30.5303 29.4697L25.0607 24L30.5303 18.5303C30.8232 18.2374 30.8232 17.7626 30.5303 17.4697C30.2374 17.1768 29.7626 17.1768 29.4697 17.4697L24 22.9393L18.5303 17.4697Z" fill="#0082B8"/>
+        </svg>
+    `;
+
+    const searchHtml = `
+        <div class="mobile-search-block">
+            <button class="mobile-search-close" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L10.9393 12L5.46967 17.4697C5.17678 17.7626 5.17678 18.2374 5.46967 18.5303C5.76256 18.8232 6.23744 18.8232 6.53033 18.5303L12 13.0607L17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L13.0607 12L18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967C18.2374 5.17678 17.7626 5.17678 17.4697 5.46967L12 10.9393L6.53033 5.46967Z" fill="#0082B8"/>
+                </svg>
+            </button>
+            <input type="text" class="mobile-search-input" placeholder="Поиск" />
+            <button class="mobile-search-submit" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8453 17.3663C14.5006 18.3913 12.8214 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19 13.0713 18.2128 14.9587 16.9214 16.3794C16.9479 16.3975 16.9736 16.4175 16.9983 16.4394L21.4983 20.4394C21.8079 20.7146 21.8357 21.1887 21.5606 21.4983C21.2854 21.8079 20.8113 21.8357 20.5017 21.5606L16.0017 17.5606C15.9373 17.5033 15.8851 17.4375 15.8453 17.3663ZM17.5 11C17.5 14.5899 14.5899 17.5 11 17.5C7.41015 17.5 4.5 14.5899 4.5 11C4.5 7.41015 7.41015 4.5 11 4.5C14.5899 4.5 17.5 7.41015 17.5 11Z" fill="#0082B8"/>
+                </svg>
+            </button>
+        </div>
+    `;
+
+    // Изначальное состояние – иконка поиска
+    searchBtn.innerHTML = searchSvg;
+
+    searchBtn.addEventListener("click", function () {
+        const isOpen = searchBtn.classList.toggle('active');
+
+        // Меняем иконку
+        searchBtn.innerHTML = isOpen ? closeSvg : searchSvg;
+
+        // Удаляем старое поле поиска, если есть
+        const oldSearch = mobileLine.querySelector('.mobile-search-block');
+        if (oldSearch) oldSearch.remove();
+
+        // Если открываем – вставляем поле поиска
+        if (isOpen) {
+            mobileLine.insertAdjacentHTML('beforeend', searchHtml);
+            
+            // Получаем элементы один раз
+            const searchInput = mobileLine.querySelector('.mobile-search-input');
+            const closeBtn = mobileLine.querySelector('.mobile-search-close');
+            const submitBtn = mobileLine.querySelector('.mobile-search-submit');
+
+            // Фокус на поле ввода
+            if (searchInput) {
+                setTimeout(() => searchInput.focus(), 100);
+            }
+
+            // Обработчик закрытия по кнопке закрытия
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    searchBtn.classList.remove('active');
+                    searchBtn.innerHTML = searchSvg;
+                    const searchBlock = mobileLine.querySelector('.mobile-search-block');
+                    if (searchBlock) searchBlock.remove();
+                });
+            }
+
+            // Обработчик отправки поиска
+            if (submitBtn && searchInput) {
+                submitBtn.addEventListener('click', function() {
+                    if (searchInput.value.trim()) {
+                        // Здесь можно добавить логику поиска
+                        console.log('Поиск:', searchInput.value);
+                        // Например, перенаправление на страницу поиска или выполнение поиска
+                    }
+                });
+            }
+
+            // Обработчик отправки по Enter
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && this.value.trim()) {
+                        // Здесь можно добавить логику поиска
+                        console.log('Поиск:', this.value);
+                        // Например, перенаправление на страницу поиска или выполнение поиска
+                    }
+                });
+            }
+        }
+    });
+});
 
 const slides = document.querySelector(".carousel-content");
 const images = document.querySelectorAll('.carousel-content-img');
