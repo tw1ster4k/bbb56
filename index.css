@@ -2912,6 +2912,7 @@ li a{
 
 .main-faq-content-block-card.active > .main-faq-content-block-card-description{
     display: block;
+    padding-right: 40px;
 }
 .main-faq-content-block-card-btn.active{
     background: url(./images/buttonBg-faq-active.svg);

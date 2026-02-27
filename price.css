@@ -277,6 +277,9 @@
         margin-top: 90px;
         padding: 0;
     }
+    .main-price-page-info::after{
+        content: url(./images/priceframeaftermobile.svg);
+    }
     
     .main-price-page-breadcrumbs {
         display: none;
