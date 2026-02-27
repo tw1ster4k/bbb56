@@ -1949,6 +1949,202 @@ a{
         display: flex;
         flex-direction: column;
     }
+    
+    /* Расширенное меню для страниц "О клинике" */
+    .navbar-mobile-extended-block{
+        position: absolute;
+        width: 100%;
+        background-color: #FFFFFF;
+        top: 80px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 80px);
+        padding: 0;
+        overflow-y: auto;
+    }
+    .navbar-mobile-extended-header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .navbar-mobile-extended-title{
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: #0082B8;
+        text-transform: uppercase;
+        margin: 0;
+        margin-left: 32px;
+    }
+    .navbar-mobile-extended-items{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 0 32px;
+        margin-bottom: 16px;
+    }
+    .navbar-mobile-extended-item{
+        background: #FFFFFF;
+        border-radius: 27px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        color: #0082B8;
+    }
+    .navbar-mobile-extended-item img{
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+    .navbar-mobile-extended-cta{
+        padding: 0 16px;
+        margin-bottom: 16px;
+    }
+    .navbar-mobile-extended-cta-block{
+        background: linear-gradient(100.78deg, rgba(234, 174, 255, 0.35) 1.342%, rgba(158, 221, 255, 0.35) 25.02%, rgba(175, 232, 255, 0.35) 52.151%, rgba(158, 221, 255, 0.35) 74.349%, rgba(234, 174, 255, 0.35) 100%);
+        border-radius: 24px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .navbar-mobile-extended-cta-title{
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 100%;
+        color: #232323;
+        margin: 0;
+    }
+    .navbar-mobile-extended-cta-text{
+        font-family: "Montserrat-Regular";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: #232323;
+        margin: 0;
+    }
+    .navbar-mobile-extended-cta-btn{
+        background: #0082B8;
+        border-radius: 27px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    .navbar-mobile-extended-cta-btn img{
+        width: 24px;
+        height: 24px;
+    }
+    .navbar-mobile-extended-footer{
+        background: #F3FBFF;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .navbar-mobile-extended-footer-section{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .navbar-mobile-extended-footer-title{
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        color: #0082B8;
+        text-align: center;
+        letter-spacing: 0.8px;
+        margin: 0;
+    }
+    .navbar-mobile-extended-footer-items{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .navbar-mobile-extended-footer-item{
+        background: #FFFFFF;
+        border-radius: 27px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        text-decoration: none;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        color: #0082B8;
+    }
+    .navbar-mobile-extended-footer-item img{
+        width: 24px;
+        height: 24px;
+    }
+    .navbar-mobile-extended-footer-contacts{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .navbar-mobile-extended-footer-contact{
+        background: #F3FBFF;
+        border-radius: 71px;
+        padding: 6px 16px 6px 8px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        color: #232323;
+    }
+    .navbar-mobile-extended-footer-contact img{
+        width: 24px;
+        height: 24px;
+    }
+    .navbar-mobile-extended-footer-socials{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    .navbar-mobile-extended-footer-social{
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .navbar-mobile-extended-footer-social img{
+        width: 34px;
+        height: 34px;
+    }
+    .navbar-mobile-extended-footer-schedule{
+        background: #F3FBFF;
+        border-radius: 71px;
+        padding: 6px 16px;
+        font-family: "Montserrat-SemiBold";
+        font-weight: 600;
+        font-size: 14px;
+        color: #232323;
+    }
+    .navbar-mobile-extended-footer-schedule p{
+        margin: 0;
+    }
+    
     .kids-card{
         min-width: 170px;
         height: 350px;
@@ -2327,6 +2523,9 @@ a{
     background: url(./images/novost-zapis.svg);
     width: 536px;
     height: 354px;
+}
+.novost-zapis.mobile{
+    display: none;
 }
 .main-contacts-content-block-online-link{
     border-radius: 27px;
@@ -3868,6 +4067,10 @@ ol li{
     margin-top: 125px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.page-novost-content{
+    max-width: 60%;
 }
 
 @media(max-width:767px){
@@ -5462,7 +5665,7 @@ ol li{
     /* Основной контейнер страницы */
     .page {
         padding: 0;
-        margin-top: 0;
+        margin-top: 80px;
         gap: 0;
         max-width: 100%;
     }
@@ -5496,7 +5699,7 @@ ol li{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin: 16px;
+        margin: 0px;
         box-sizing: border-box;
     }
     
@@ -5617,7 +5820,7 @@ ol li{
         font-size: 16px;
         line-height: 1.2;
         color: #232323;
-        margin: 0 0 16px 0;
+        margin: 0px;
     }
     
     .about h4 + ul {
@@ -5660,7 +5863,7 @@ ol li{
     
     .doc-block {
         flex: 1;
-        height: 220px;
+        height: 120px;
         border-radius: 24px;
         background-size: cover;
         background-position: center;
@@ -5671,30 +5874,31 @@ ol li{
         width: 100%;
         height: 245px;
         border-radius: 24px;
-        margin: 16px;
+        margin: 0px;
         box-sizing: border-box;
         background: linear-gradient(100.26deg, rgba(234, 174, 255, 1) 1.34%, rgba(158, 221, 255, 1) 25.02%, rgba(175, 232, 255, 1) 52.15%, rgba(158, 221, 255, 1) 74.35%, rgba(234, 174, 255, 1) 100%);
-        background-image: url(./images/zapisatya-doctor.svg);
+        background-image: url(./images/zapis-doctor-mobile.svg);
         background-size: cover;
         background-position: center;
         position: relative;
         overflow: hidden;
         display: block;
+        margin-bottom: 16px;
     }
     
     .page .main-contacts-content-block-online-link.doctor {
         margin: 0;
         position: absolute;
         left: 14px;
-        top: 50%;
+        top: 68%;
         transform: translateY(-50%);
-        width: auto;
+        width: 190px;
         height: auto;
         padding: 12px;
         font-size: 16px;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 0px;
     }
     
     .page .main-contacts-content-block-online-link.doctor svg {
@@ -5715,14 +5919,13 @@ ol li{
     .page-novost {
         max-width: 100%;
         padding: 0;
-        margin-top: 0;
+        margin-top: 80px;
         flex-direction: column;
         gap: 0;
     }
     
-    .page-novost > div[style*="max-width: 60%"] {
+    .page-novost-content {
         max-width: 100%;
-        width: 100%;
     }
     
     /* Заголовок новости */
@@ -5747,8 +5950,8 @@ ol li{
         display: flex;
         flex-direction: column;
         gap: 16px;
+        margin: 0;
         width: 100%;
-        margin: 0 16px;
         box-sizing: border-box;
     }
     
@@ -5757,7 +5960,12 @@ ol li{
         flex-direction: column;
         gap: 16px;
     }
-    
+        .novost-card-info > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: start;
+    }
     .novost-card-info-title {
         font-family: "Montserrat-SemiBold";
         font-weight: 600;
@@ -5786,10 +5994,10 @@ ol li{
         font-size: 12px;
         line-height: 100%;
         color: #0082B8;
-        width: auto;
         display: inline-block;
-        text-align: left;
+        text-align: center;
         margin: 0;
+        
     }
     
     /* Секция "О новости" */
@@ -5861,34 +6069,35 @@ ol li{
         font-family: "Montserrat-SemiBold";
         font-weight: 600;
     }
-    
+        .novost-zapis.mobile{
+        display: flex;
+    }
     /* Блок "Записаться онлайн" */
     .novost-zapis {
-        width: calc(100% - 32px);
+        width: 100%;
         height: 258px;
         border-radius: 24px;
-        margin: 16px;
+        margin-top: 16px;
         box-sizing: border-box;
         background: linear-gradient(99.75662483833045deg, rgb(234, 174, 255) 1.342%, rgb(158, 221, 255) 25.02%, rgb(175, 232, 255) 52.151%, rgb(158, 221, 255) 74.349%, rgb(234, 174, 255) 100%);
-        background-image: url(./images/novost-zapis.svg);
+        background-image: url(./images/novost-link-mobile.svg);
         background-size: cover;
         background-position: center;
         position: relative;
         overflow: hidden;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
-    
     .main-contacts-content-block-online-link.novost {
         margin: 0;
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 72%;
         transform: translate(-50%, -50%);
-        width: auto;
-        height: auto;
-        padding: 12px;
+        width: 151px;
+        height: 24px;
+        padding:12px;
         font-size: 16px;
         display: flex;
         align-items: center;

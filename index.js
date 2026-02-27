@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!navbarBtn || !navbarMobil) return;
 
+    // Проверяем, нужно ли использовать расширенное меню
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const extendedMenuPages = ['clinic.html', 'licenses.html', 'requisites.html', 'supervisory.html', 'vacancies.html', 'vacancy-detail.html', 'gallery.html'];
+    const useExtendedMenu = extendedMenuPages.includes(currentPage);
+
     const burgerSvg = `
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
             <rect width="48" height="48" rx="24" fill="#DCEFF9"/>
@@ -101,6 +106,57 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     `;
 
+    // Расширенное меню для страниц "О клинике"
+    const extendedMenuHtml = `
+        <div class="navbar-mobile-extended-block">
+            <div class="navbar-mobile-extended-header">
+                <p class="navbar-mobile-extended-title">О КЛИНИКЕ</p>
+            </div>
+            <div class="navbar-mobile-extended-items">
+                <a class="navbar-mobile-extended-item" href="clinic.html">
+                    <img src="images/navbaricons/info.svg" alt="">
+                    <span>О клинике</span>
+                </a>
+                <a class="navbar-mobile-extended-item" href="licenses.html">
+                    <img src="images/navbaricons/paste.svg" alt="">
+                    <span>Лицензии</span>
+                </a>
+                <a class="navbar-mobile-extended-item" href="requisites.html">
+                    <img src="images/navbaricons/contacts.svg" alt="">
+                    <span>Реквизиты</span>
+                </a>
+                <a class="navbar-mobile-extended-item" href="supervisory.html">
+                    <img src="images/navbaricons/first-aid.svg" alt="">
+                    <span>Надзорные органы</span>
+                </a>
+                <a class="navbar-mobile-extended-item" href="vacancies.html">
+                    <img src="images/navbaricons/first-aid.svg" alt="">
+                    <span>Вакансии</span>
+                </a>
+                <a class="navbar-mobile-extended-item" href="gallery.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M7.5 10C8.32843 10 9 9.32843 9 8.5C9 7.67157 8.32843 7 7.5 7C6.67157 7 6 7.67157 6 8.5C6 9.32843 6.67157 10 7.5 10Z" fill="#0082B8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 4H18C20.2091 4 22 5.79086 22 8V16C22 18.2091 20.2091 20 18 20H6C3.79086 20 2 18.2091 2 16V8C2 5.79086 3.79086 4 6 4ZM18 5.5H6C4.61929 5.5 3.5 6.61929 3.5 8V16C3.5 16.3858 3.58741 16.7513 3.7435 17.0775L5.93431 14.0652C6.94223 12.6793 9.03781 12.7719 9.91949 14.2414C10.3009 14.8772 11.2465 14.7968 11.5152 14.1058L12.6188 11.2681C13.3231 9.45705 15.8097 9.26533 16.7833 10.947L20.2901 17.0042C20.4251 16.6969 20.5 16.3572 20.5 16V8C20.5 6.61929 19.3807 5.5 18 5.5ZM6 18.5C5.5612 18.5 5.14881 18.387 4.79036 18.1884L7.14741 14.9474C7.52321 14.4307 8.30452 14.4653 8.63325 15.0131C9.65635 16.7183 12.1925 16.5028 12.9132 14.6495L14.0168 11.8117C14.2651 11.1732 15.1419 11.1056 15.4852 11.6985L19.2344 18.1745C18.8702 18.3817 18.4489 18.5 18 18.5H6Z" fill="#0082B8"/>
+</svg>
+                    <span>Фотогалерея</span>
+                </a>
+            </div>
+            <div class="navbar-mobile-extended-cta">
+                <div class="navbar-mobile-extended-cta-block">
+                    <p class="navbar-mobile-extended-cta-title">Записаться онлайн</p>
+                    <p class="navbar-mobile-extended-cta-text">Оставьте обращение на сайте, мы свяжемся с Вами в ближайшее время и ответим на все интересующие вопросы.</p>
+                    <a href="https://t.me/..." class="navbar-mobile-extended-cta-btn" target="_blank" rel="noopener">
+                        <img src="images/icon/icon/telegram2.svg" alt="">
+                        <span>Записаться</span>
+                    </a>
+                </div>
+                <div class="navbar-mobile-extended-cta">
+                </div>
+            </div>
+              
+        </div>
+    `;
+
     // начальное состояние – бургер и закрытое меню
     navbarBtn.innerHTML = burgerSvg;
 
@@ -111,14 +167,18 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarBtn.innerHTML = isOpen ? closeSvg : burgerSvg;
 
         // удаляем предыдущий блок меню, если он был
-        const existingMenu = navbarMobil.querySelector('.navbar-mobile-block');
+        const existingMenu = navbarMobil.querySelector('.navbar-mobile-block, .navbar-mobile-extended-block');
         if (existingMenu) {
             existingMenu.remove();
         }
 
-        // если открываем – вставляем меню
+        // если открываем – вставляем соответствующее меню
         if (isOpen) {
-            navbarMobil.insertAdjacentHTML('beforeend', menuHtml);
+            if (useExtendedMenu) {
+                navbarMobil.insertAdjacentHTML('beforeend', extendedMenuHtml);
+            } else {
+                navbarMobil.insertAdjacentHTML('beforeend', menuHtml);
+            }
         }
     });
 });
